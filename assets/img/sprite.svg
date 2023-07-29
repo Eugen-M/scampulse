@@ -273,9 +273,19 @@
         <path d="M8.33203 9.16699V14.167" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M11.668 9.16699V14.167" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol id="" viewBox="" fill="none"><!-- stroke -->
+    <symbol id="checked" viewBox="0 0 22 22" fill="none"><!-- color -->
+        <g clip-path="url(#clip0_976_13797)">
+            <path d="M11.0007 1.83398C5.94065 1.83398 1.83398 5.94065 1.83398 11.0007C1.83398 16.0607 5.94065 20.1673 11.0007 20.1673C16.0607 20.1673 20.1673 16.0607 20.1673 11.0007C20.1673 5.94065 16.0607 1.83398 11.0007 1.83398ZM9.16732 15.584L4.58398 11.0007L5.87648 9.70815L9.16732 12.9898L16.1248 6.03232L17.4173 7.33398L9.16732 15.584Z" fill="#24DF91"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_976_13797">
+                <rect width="22" height="22" fill="white"/>
+            </clipPath>
+        </defs>
     </symbol>
-    <symbol id="" viewBox="" fill="none"><!-- stroke -->
+    <symbol id="plus" viewBox="0 0 24 24" fill="none"><!-- stroke -->
+        <path d="M12 5V19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 12H19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
     <symbol id="" viewBox="" fill="none"><!-- stroke -->
     </symbol>

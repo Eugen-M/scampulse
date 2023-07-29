@@ -1,6 +1,47 @@
 @import '../common/colors', '../common/mixins';
 
 .upload {
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+        background: none;
+        border: none;
+        margin: 0 0 24px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 16px;
+        }
+
+        &-icon {
+            margin: 0 12px 0 0;
+            width: 24px;
+            height: 24px;
+            display: block;
+            stroke: $c-shades-black-100;
+        }
+
+        &-label {
+            font-weight: 400;
+            letter-spacing: -0.24px;
+            line-height: 1.5;
+            font-size: 16px;
+            color: $c-shades-black-100;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                letter-spacing: -0.21px;
+            }
+        }
+    }
+
     &__item {
         display: flex;
         justify-content: space-between;

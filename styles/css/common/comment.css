@@ -87,6 +87,7 @@
   border: none;
   cursor: pointer;
   display: block;
+  background: none;
 }
 .comment__btn-icon {
   display: block;

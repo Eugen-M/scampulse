@@ -103,8 +103,10 @@
   fill: #1A1A1A;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-.btn__icon_color {
+.btn__icon--color {
   fill: none;
   stroke: none;
 }
@@ -113,6 +115,10 @@
     width: 20px;
     height: 20px;
   }
+}
+.btn:hover .btn__icon--color {
+  fill: none !important;
+  stroke: none !important;
 }
 .btn:disabled .btn__icon, .btn:disabled:hover .btn__icon {
   stroke: #1A1A1A;

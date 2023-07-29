@@ -36,6 +36,9 @@
           align-items: center;
   cursor: pointer;
 }
+.user-navi__link:hover {
+  text-decoration: none;
+}
 .user-navi__column {
   display: -webkit-box;
   display: -ms-flexbox;

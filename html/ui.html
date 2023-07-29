@@ -200,16 +200,24 @@
               <button class="btn btn--secondary" type="button" disabled>btn secondary disabled</button><br />
 <br />
               <button class="btn" type="button">
-                <svg class="btn__icon btn__icon_color">
+                <svg class="btn__icon btn__icon--color">
                   <use href="../assets/img/sprite.svg#facebook"></use>
                 </svg><span class="btn__label">Log In with Facebook</span>
               </button><br />
 <br />
               <button class="btn" type="button">
-                <svg class="btn__icon btn__icon_color">
+                <svg class="btn__icon btn__icon--color">
                   <use href="../assets/img/sprite.svg#google"></use>
                 </svg><span class="btn__label">Log In with Google </span>
               </button><br />
+<br /><a class="btn btn--primary" href="">
+                <svg class="btn__icon">
+                  <use href="../assets/img/sprite.svg#edit"></use>
+                </svg><span class="btn__label">With icon</span></a><br />
+<br /><a class="btn btn--primary btn--hide-label btn--report" href="">
+                <svg class="btn__icon">
+                  <use href="../assets/img/sprite.svg#edit"></use>
+                </svg><span class="btn__label">With icon, but in mobile hide label</span></a><br />
 <br />
             </div>
             <div class="container">
@@ -334,6 +342,15 @@
                 <svg class="our-achievements__item-icon our-achievements__item-icon--security">
                   <use href="../assets/img/sprite.svg#security"></use>
                 </svg>
+                <svg class="upload__item-btn-icon">
+                  <use href="../assets/img/sprite.svg#delete"></use>
+                </svg>
+                <svg class="report__form-btn-upload-icon">
+                  <use href="../assets/img/sprite.svg#upload"></use>
+                </svg>
+                <svg class="social-media__item-icon">
+                  <use href="../assets/img/sprite.svg#checked"></use>
+                </svg>
               </div><br />
 <br />
             </div>
@@ -455,7 +472,7 @@
             </div>
                     <div class="modal-message">
                       <svg class="modal-message__icon">
-                        <use href="../assets/img/sprite.svg#verified"></use>
+                        <use href="../assets/img/sprite.svg#checked"></use>
                       </svg>
                       <div class="modal-message__text">Password sent to your email</div>
                       <button class="modal-message__btn" type="button" aria-label="Close">
@@ -482,6 +499,66 @@
                       <li>Deliver targeted advertising to you.</li>
                     </ul>
                   </section>
+                </div>
+              </div><br />
+<br />
+              <div class="container">
+                <div class="upload"> 
+                  <div class="upload__files"> 
+                    <div class="upload__item">
+                      <div class="upload__item-column">
+                        <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt="">
+                          <div class="upload__item-loader">
+                            <div class="upload__item-loader-circle">
+                              <div class="upload__item-loader-circle-inner"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="upload__item-box">
+                          <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                          <div class="upload__item-status">Upload...</div>
+                        </div>
+                      </div>
+                      <button class="upload__item-btn"> 
+                        <svg class="upload__item-btn-icon">
+                          <use href="../assets/img/sprite.svg#delete"></use>
+                        </svg><span class="upload__item-btn-label">Remove</span>
+                      </button>
+                    </div>
+                    <div class="upload__item">
+                      <div class="upload__item-column">
+                        <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt=""></div>
+                        <div class="upload__item-box">
+                          <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                          <div class="upload__item-status upload__item-status--success">Success</div>
+                        </div>
+                      </div>
+                      <button class="upload__item-btn"> 
+                        <svg class="upload__item-btn-icon">
+                          <use href="../assets/img/sprite.svg#delete"></use>
+                        </svg><span class="upload__item-btn-label">Remove</span>
+                      </button>
+                    </div>
+                    <div class="upload__item">
+                      <div class="upload__item-column">
+                        <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt=""></div>
+                        <div class="upload__item-box">
+                          <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                          <div class="upload__item-status upload__item-status--failed">Failed</div>
+                        </div>
+                      </div>
+                      <button class="upload__item-btn"> 
+                        <svg class="upload__item-btn-icon">
+                          <use href="../assets/img/sprite.svg#delete"></use>
+                        </svg><span class="upload__item-btn-label">Remove</span>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="upload__btn" type="button">
+                    <svg class="upload__btn-icon">
+                      <use href="../assets/img/sprite.svg#plus"></use>
+                    </svg><span class="upload__btn-label">Upload Your Files</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -806,6 +883,269 @@
                         </div>
                       </div><br />
 <br />
+                      <div class="report"> 
+                        <div class="report__content"> 
+                          <div class="report__header"> 
+                            <div class="report__header-avatar">A</div>
+                            <div class="report__header-column"> 
+                              <div class="report__header-title"> <a class="report__header-name" href="">Aliona Walter</a>
+                                <svg class="report__header-verified">
+                                  <use href="../assets/img/sprite.svg#verified"></use>
+                                </svg>
+                              </div>
+                              <time class="report__header-date">27 April 2022</time>
+                            </div>
+                          </div>
+                          <div class="report__table"> 
+                            <div class="report__table-row"> 
+                              <div class="report__table-header">Scammer’s Phone</div>
+                              <div class="report__table-column">+1 (509)-878-3069</div>
+                            </div>
+                            <div class="report__table-row"> 
+                              <div class="report__table-header">Scammer’s Email</div>
+                              <div class="report__table-column">mentsunpaidloans@gmail.com</div>
+                            </div>
+                            <div class="report__table-row"> 
+                              <div class="report__table-header">Country</div>
+                              <div class="report__table-column">United States</div>
+                            </div>
+                            <div class="report__table-row"> 
+                              <div class="report__table-header">Intial Means of Contact</div>
+                              <div class="report__table-column">Email</div>
+                            </div>
+                            <div class="report__table-row"> 
+                              <div class="report__table-header">Type of Scam</div>
+                              <div class="report__table-column">
+                                <div class="report__table-badge">Debt Collections</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="report__title"><a class="report__title-link" href="">No "ad-free 30 minutes" for watching "short video"</a></div>
+                          <div class="report__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                        </div>
+                        <div class="report__footer">
+                          <button class="report__btn report__btn--useful" type="button">
+                            <svg class="report__btn-icon">
+                              <use href="../assets/img/sprite.svg#useful"></use>
+                            </svg><span class="report__btn-label">Useful</span>
+                          </button>
+                          <button class="report__btn report__btn--reply report__btn--active" type="button">
+                            <svg class="report__btn-icon">
+                              <use href="../assets/img/sprite.svg#reply"></use>
+                            </svg><span class="report__btn-label">Reply</span>
+                          </button>
+                          <button class="report__btn report__btn--share" type="button">
+                            <svg class="report__btn-icon">
+                              <use href="../assets/img/sprite.svg#share"></use>
+                            </svg><span class="report__btn-label">Share</span>
+                          </button>
+                        </div>
+                        <form class="report__form">
+                          <div class="report__form-header">
+                            <div class="report__form-title">Replies</div>
+                            <div class="report__form-quan">3</div>
+                          </div>
+                          <div class="report__form-box">
+                            <textarea class="report__form-textarea" placeholder="Your Reply Here..."></textarea>
+                            <div class="report__form-row">
+                              <div class="upload__item">
+                                <div class="upload__item-column">
+                                  <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt="">
+                                    <div class="upload__item-loader">
+                                      <div class="upload__item-loader-circle">
+                                        <div class="upload__item-loader-circle-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="upload__item-box">
+                                    <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                                    <div class="upload__item-status">Upload...</div>
+                                  </div>
+                                </div>
+                                <button class="upload__item-btn"> 
+                                  <svg class="upload__item-btn-icon">
+                                    <use href="../assets/img/sprite.svg#delete"></use>
+                                  </svg><span class="upload__item-btn-label">Remove</span>
+                                </button>
+                              </div>
+                              <div class="upload__item">
+                                <div class="upload__item-column">
+                                  <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt=""></div>
+                                  <div class="upload__item-box">
+                                    <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                                    <div class="upload__item-status upload__item-status--success">Success</div>
+                                  </div>
+                                </div>
+                                <button class="upload__item-btn"> 
+                                  <svg class="upload__item-btn-icon">
+                                    <use href="../assets/img/sprite.svg#delete"></use>
+                                  </svg><span class="upload__item-btn-label">Remove</span>
+                                </button>
+                              </div>
+                              <div class="upload__item">
+                                <div class="upload__item-column">
+                                  <div class="upload__item-photo"> <img class="upload__item-img" src="../assets/content/vermeer.jpg" alt=""></div>
+                                  <div class="upload__item-box">
+                                    <div class="upload__item-name">windows-JW-T2BH5k5E-unsplash.jpg</div>
+                                    <div class="upload__item-status upload__item-status--failed">Failed</div>
+                                  </div>
+                                </div>
+                                <button class="upload__item-btn"> 
+                                  <svg class="upload__item-btn-icon">
+                                    <use href="../assets/img/sprite.svg#delete"></use>
+                                  </svg><span class="upload__item-btn-label">Remove</span>
+                                </button>
+                              </div>
+                              <div class="report__form-footer">
+                                <button class="report__form-btn-upload" type="button">
+                                  <svg class="report__form-btn-upload-icon">
+                                    <use href="../assets/img/sprite.svg#upload"></use>
+                                  </svg>
+                                </button>
+                                <button class="btn btn--primary report__form-btn-send" type="button">Send</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <div class="comment__header"> 
+                              <div class="comment__user"> 
+                                <div class="comment__avatar">
+                                  <svg class="comment__avatar-icon">
+                                    <use href="../assets/img/sprite.svg#user"></use>
+                                  </svg>
+                                </div>
+                                <div class="comment__name">Alex Alex Alex</div>
+                              </div>
+                              <button class="comment__btn" type="button">
+                                <svg class="comment__btn-icon">
+                                  <use href="../assets/img/sprite.svg#dots"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="comment__content"> 
+                              <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                            </div>
+                            <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                              <time class="comment__row-date">11 Hours</time>
+                            </div>
+                            <div class="comment__reply">
+                              <div class="comment">
+                                <div class="comment__header"> 
+                                  <div class="comment__user"> 
+                                    <div class="comment__avatar"><img class="comment__avatar-img" alt="" src="../assets/content/avatar.jpg"></div>
+                                    <div class="comment__name">Alex Alex Alex</div>
+                                  </div>
+                                  <button class="comment__btn" type="button">
+                                    <svg class="comment__btn-icon">
+                                      <use href="../assets/img/sprite.svg#dots"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="comment__content"> 
+                                  <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                                </div>
+                                <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                                  <time class="comment__row-date">11 Hours</time>
+                                </div>
+                                <div class="comment-reply"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <div class="comment__header"> 
+                              <div class="comment__user"> 
+                                <div class="comment__avatar">
+                                  <svg class="comment__avatar-icon">
+                                    <use href="../assets/img/sprite.svg#user"></use>
+                                  </svg>
+                                </div>
+                                <div class="comment__name">Alex Alex Alex</div>
+                              </div>
+                              <button class="comment__btn" type="button">
+                                <svg class="comment__btn-icon">
+                                  <use href="../assets/img/sprite.svg#dots"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="comment__content"> 
+                              <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                            </div>
+                            <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                              <time class="comment__row-date">11 Hours</time>
+                            </div>
+                            <div class="comment__reply"> 
+                              <div class="comment">
+                                <div class="comment__header"> 
+                                  <div class="comment__user"> 
+                                    <div class="comment__avatar">
+                                      <svg class="comment__avatar-icon">
+                                        <use href="../assets/img/sprite.svg#user"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="comment__name">Alex Alex Alex</div>
+                                  </div>
+                                  <button class="comment__btn" type="button">
+                                    <svg class="comment__btn-icon">
+                                      <use href="../assets/img/sprite.svg#dots"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="comment__content"> 
+                                  <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                                </div>
+                                <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                                  <time class="comment__row-date">11 Hours</time>
+                                </div>
+                                <div class="comment__reply">
+                                  <div class="comment">
+                                    <div class="comment__header"> 
+                                      <div class="comment__user"> 
+                                        <div class="comment__avatar"><img class="comment__avatar-img" alt="" src="../assets/content/avatar.jpg"></div>
+                                        <div class="comment__name">Alex Alex Alex</div>
+                                      </div>
+                                      <button class="comment__btn" type="button">
+                                        <svg class="comment__btn-icon">
+                                          <use href="../assets/img/sprite.svg#dots"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <div class="comment__content"> 
+                                      <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                                    </div>
+                                    <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                                      <time class="comment__row-date">11 Hours</time>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="comment">
+                            <div class="comment__header"> 
+                              <div class="comment__user"> 
+                                <div class="comment__avatar">
+                                  <svg class="comment__avatar-icon">
+                                    <use href="../assets/img/sprite.svg#user"></use>
+                                  </svg>
+                                </div>
+                                <div class="comment__name">Alex Alex Alex</div>
+                              </div>
+                              <button class="comment__btn" type="button">
+                                <svg class="comment__btn-icon">
+                                  <use href="../assets/img/sprite.svg#dots"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="comment__content"> 
+                              <div class="comment__text">I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!</div>
+                            </div>
+                            <div class="comment__row"><a class="comment__row-link" href="">Reply</a><span class="comment__row-sep"> </span>
+                              <time class="comment__row-date">11 Hours</time>
+                            </div>
+                          </div>
+                        </form>
+                      </div><br />
+<br />
               <article class="card__article">
                 <div class="card__article-title">Is Scampluse.com associated with Spotify?</div>
                 <hr class="card__article-line">
@@ -817,6 +1157,8 @@
               </article><br />
 <br />
 <br />
+<br />
+              <h1>Search</h1><br />
 <br />
               <form class="search">
                 <div class="search__wrapper">

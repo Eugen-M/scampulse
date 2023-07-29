@@ -37,6 +37,62 @@ block content
                         +form-block-item("Review Headline", "review", "text")
                         +form-block-item("Share Your Experience", "experience", "text")
 
+                        .upload 
+                            .upload__files 
+                                .upload__item
+                                    .upload__item-column
+                                        .upload__item-photo 
+                                            img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                            .upload__item-loader
+                                                .upload__item-loader-circle
+                                                    .upload__item-loader-circle-inner
+
+                                        .upload__item-box
+                                            .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                            .upload__item-status Upload...
+
+                                    button.upload__item-btn 
+                                        svg.upload__item-btn-icon
+                                            use(href="../assets/img/sprite.svg#delete")
+                                        span.upload__item-btn-label Remove
+
+                                .upload__item
+                                    .upload__item-column
+                                        .upload__item-photo 
+                                            img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                        .upload__item-box
+                                            .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                            .upload__item-status.upload__item-status--success Success
+
+                                    button.upload__item-btn 
+                                        svg.upload__item-btn-icon
+                                            use(href="../assets/img/sprite.svg#delete")
+                                        span.upload__item-btn-label Remove
+
+                                .upload__item
+                                    .upload__item-column
+                                        .upload__item-photo 
+                                            img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                        .upload__item-box
+                                            .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                            .upload__item-status.upload__item-status--failed Failed
+
+                                    button.upload__item-btn 
+                                        svg.upload__item-btn-icon
+                                            use(href="../assets/img/sprite.svg#delete")
+                                        span.upload__item-btn-label Remove
+
+                            button.upload__btn(type="button")
+                                svg.upload__btn-icon
+                                    use(href="../assets/img/sprite.svg#plus")
+                                span.upload__btn-label Upload Your Files
+
                         .form-block__buttons.form-block__buttons--last
                             button.btn.btn--primary(type="button" disabled)     
                                 span.btn__label Submit 

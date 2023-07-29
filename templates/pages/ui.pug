@@ -27,15 +27,27 @@ block content
             <br />
             <br />
             button.btn(type="button")
-                svg.btn__icon.btn__icon_color
+                svg.btn__icon.btn__icon--color
                     use(href="../assets/img/sprite.svg#facebook")
                 span.btn__label Log In with Facebook
             <br />
             <br />
             button.btn(type="button")
-                svg.btn__icon.btn__icon_color
+                svg.btn__icon.btn__icon--color
                     use(href="../assets/img/sprite.svg#google")
                 span.btn__label Log In with Google 
+            <br />
+            <br />
+            a.btn.btn--primary(href="")
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#edit")
+                span.btn__label With icon
+            <br />
+            <br />
+            a.btn.btn--primary.btn--hide-label.btn--report(href="")
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#edit")
+                span.btn__label With icon, but in mobile hide label
             <br />
             <br />
         .container
@@ -164,6 +176,15 @@ block content
                 svg.our-achievements__item-icon.our-achievements__item-icon--security
                     use(href="../assets/img/sprite.svg#security")
 
+                svg.upload__item-btn-icon
+                    use(href="../assets/img/sprite.svg#delete")
+
+                svg.report__form-btn-upload-icon
+                    use(href="../assets/img/sprite.svg#upload")
+
+                svg.social-media__item-icon
+                    use(href="../assets/img/sprite.svg#checked")
+
             <br />
             <br />
             
@@ -190,7 +211,7 @@ block content
             <br />
             <br />
             
-        +modal-message("verified", "Password sent to your email")
+        +modal-message("checked", "Password sent to your email")
         
         .wrapper.wrapper_night
             .container
@@ -217,8 +238,65 @@ block content
                             li To send you marketing and promotional communications. We and/or our third party marketing partners may use the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt-out of our marketing emails at any time (see the "what are your privacy rights" below).
                             li To send administrative information to you. We may use your personal information to send you product, service and new feature information and/or information about changes to our terms, conditions, and policies.
                             li Deliver targeted advertising to you.
-        
-            
+
+            <br />
+            <br />
+            .container
+                .upload 
+                    .upload__files 
+                        .upload__item
+                            .upload__item-column
+                                .upload__item-photo 
+                                    img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                    .upload__item-loader
+                                        .upload__item-loader-circle
+                                            .upload__item-loader-circle-inner
+
+                                .upload__item-box
+                                    .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                    .upload__item-status Upload...
+
+                            button.upload__item-btn 
+                                svg.upload__item-btn-icon
+                                    use(href="../assets/img/sprite.svg#delete")
+                                span.upload__item-btn-label Remove
+
+                        .upload__item
+                            .upload__item-column
+                                .upload__item-photo 
+                                    img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                .upload__item-box
+                                    .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                    .upload__item-status.upload__item-status--success Success
+
+                            button.upload__item-btn 
+                                svg.upload__item-btn-icon
+                                    use(href="../assets/img/sprite.svg#delete")
+                                span.upload__item-btn-label Remove
+
+                        .upload__item
+                            .upload__item-column
+                                .upload__item-photo 
+                                    img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
+
+                                .upload__item-box
+                                    .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
+
+                                    .upload__item-status.upload__item-status--failed Failed
+
+                            button.upload__item-btn 
+                                svg.upload__item-btn-icon
+                                    use(href="../assets/img/sprite.svg#delete")
+                                span.upload__item-btn-label Remove
+
+                    button.upload__btn(type="button")
+                        svg.upload__btn-icon
+                            use(href="../assets/img/sprite.svg#plus")
+                        span.upload__btn-label Upload Your Files
 
         .container
             <br />
@@ -288,6 +366,11 @@ block content
             <br />
             <br />
 
+            +report-with-comments
+
+            <br />
+            <br />
+
             article.card__article
                 .card__article-title Is Scampluse.com associated with Spotify?
 
@@ -306,6 +389,10 @@ block content
             <br />
             <br />
 
+            h1 Search
+
+            <br />
+            <br />
             
             form.search
                 .search__wrapper

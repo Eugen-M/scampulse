@@ -73,6 +73,7 @@
         border: none;
         cursor: pointer;
         display: block;
+        background: none;
 
         &-icon {
             display: block;
@@ -82,8 +83,6 @@
             opacity: 0.72;
         }
     }
-
-    &__content {}
 
     &__text {
         margin-bottom: 12px;

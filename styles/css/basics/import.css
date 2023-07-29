@@ -455,8 +455,10 @@ svg {
   fill: #1A1A1A;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-.btn__icon_color {
+.btn__icon--color {
   fill: none;
   stroke: none;
 }
@@ -465,6 +467,10 @@ svg {
     width: 20px;
     height: 20px;
   }
+}
+.btn:hover .btn__icon--color {
+  fill: none !important;
+  stroke: none !important;
 }
 .btn:disabled .btn__icon, .btn:disabled:hover .btn__icon {
   stroke: #1A1A1A;
@@ -1915,8 +1921,8 @@ svg {
   color: #1A1A1A;
 }
 .report-item__svg {
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
   display: block;
   stroke: #808080;
 }
@@ -5545,6 +5551,9 @@ svg {
           align-items: center;
   cursor: pointer;
 }
+.user-navi__link:hover {
+  text-decoration: none;
+}
 .user-navi__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5975,6 +5984,7 @@ svg {
   border: none;
   cursor: pointer;
   display: block;
+  background: none;
 }
 .comment__btn-icon {
   display: block;
@@ -6045,6 +6055,58 @@ svg {
 }
 
 /* Placeholders */
+@media (max-width: 767px) {
+  .upload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.upload__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border: none;
+  margin: 0 0 24px;
+}
+@media (max-width: 767px) {
+  .upload__btn {
+    margin-bottom: 16px;
+  }
+}
+.upload__btn-icon {
+  margin: 0 12px 0 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  stroke: #1A1A1A;
+}
+.upload__btn-label {
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #1A1A1A;
+}
+@media (max-width: 767px) {
+  .upload__btn-label {
+    font-size: 14px;
+    letter-spacing: -0.21px;
+  }
+}
 .upload__item {
   display: -webkit-box;
   display: -ms-flexbox;

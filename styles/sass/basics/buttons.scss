@@ -110,8 +110,9 @@
         stroke: $c-shades-black-100;
         fill: $c-shades-black-100;
         flex-shrink: 0;
+        transition: $anim;
 
-        &_color {
+        &--color {
             fill: none;
             stroke: none;
         }
@@ -120,6 +121,11 @@
             width: 20px;
             height: 20px;
         }
+    }
+
+    &:hover &__icon--color {
+        fill: none !important;
+        stroke: none !important;
     }
 
     &:disabled &__icon,
