@@ -1,0 +1,51 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | All categories page
+
+block styles
+    
+block content            
+    .main-slide.main-slide--search
+        .container
+            .main-slide__inner
+                .main-slide__column
+                    .main-slide__title What Are You <br/> Looking For?
+
+                    +search-row
+
+                .main-slide__box
+                    img(src="../assets/img/main-slide-search.svg" alt="" class="main-slide__img img-fluid")
+    
+    .categories
+        .container   
+            .categories__header
+                svg.categories__header-icon
+                    use(href="../assets/img/sprite.svg#edit")
+                .categories__header-title Report Categories
+
+            ul.categories__navi
+                li.categories__navi-item
+                    a.categories__navi-link.categories__navi-link--active(href="") Scams
+                li.categories__navi-item
+                    a.categories__navi-link(href="") Business
+                li.categories__navi-item
+                    a.categories__navi-link(href="") Investment
+                li.categories__navi-item
+                    a.categories__navi-link(href="") Goverment
+
+            .categories__section
+                .categories__section-header 
+                    .categories__section-icon 
+                        svg.categories__section-svg
+                            use(href="../assets/img/sprite.svg#security")
+                    .categories__section-title Scams
+
+                .categories__section-content
+                    ul.categories__list
+                        each val in ["Worthless Problem-solving Service Scam", "Vanity Award Scam", "Nigerian/Foreign Money Exchange", "Investment", "Identity Theft", "Phishing", "Government Grant", "Government Agency Imposter", "Family/Friend Emergency", "Fake Invoice/Supplier Bill", "Fake Check/Money Order", "Employment", "Debt Collections", "CryptoCurrency", "Credit Repair/Debt Relief", "COVID-19", "Counterfeit Product", "Bank/Credit Card Company Imposter Scam", "Advance Fee Loan"]
+                            li.categories__list-item
+                                a.categories__list-link(href="")= val
+    
+    +slider-reports("Latest Reports", "radio", "slider-reports_bg-gray")

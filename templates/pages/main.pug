@@ -1,0 +1,83 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | Main page
+
+block styles
+    
+block content
+    .main-slide
+        .container
+            .main-slide__inner
+                .main-slide__column
+                    .main-slide__title 
+                        span.main-slide__title-span Report scams 
+                        | to help others stay safe!
+                    .main-slide__text Stay ahead of the game by reporting new scam tactics as they arise
+
+                    +search-row
+
+                .main-slide__box
+                    img(src="../assets/img/main-slide-img.svg" alt="" class="main-slide__img img-fluid")
+
+    .scam-categories
+        .container 
+            .scam-categories__header 
+                .scam-categories__title 
+                    svg.scam-categories__title-icon
+                        use(href="../assets/img/sprite.svg#edit")
+                    | Scam Categories
+
+                a.btn.btn--primary.scam-categories__btn(href="")
+                    svg.btn__icon
+                        use(href="../assets/img/sprite.svg#categories")
+                    span.btn__label All Categories
+
+            .scam-categories__wrapper.scam-categories__wrapper--limited 
+                .scam-categories__column
+                    +scam-categories__item("bill-list", "Fake Check", "9 Reports")
+                
+                .scam-categories__column
+                    +scam-categories__item("card", "Credit Cards", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("point-on-map", "Travel or Vacations", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("bag", "Online Purchase", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("pie-chat", "Investment", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("user-id", "Employment", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("covid", "COVID-19", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("government", "Government Grant", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("heart", "Romance", "9 Reports")
+
+    +slider-reports("Latest Reports", "radio", "")
+    +slider-reports("Featured Reports", "star", "slider-reports_bg-gray")
+    +slider-reports("Trending Reports", "trending-up", "")
+
+    .main-slide.main-slide--money
+        .container
+            .main-slide__inner
+                .main-slide__column
+                    .main-slide__title You’ve lost money <br />
+                        span.main-slide__title-span to scammers?
+                    .main-slide__text  We’ll work with you to get your money back!
+
+                    a.btn.btn--primary(href="")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#edit")
+                        span.btn__label File report
+
+                .main-slide__box
+                    img(src="../assets/img/lost-money.svg" alt="" class="main-slide__img img-fluid")

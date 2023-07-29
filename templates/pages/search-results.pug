@@ -1,0 +1,91 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | Search results page
+
+block styles
+    
+block content 
+    .search-results 
+        .container
+            .search-results__label Results For
+
+            .search-results__title#values Spo
+            
+            .search-results__box
+                +search("")
+
+    section.related-section.related-section_bg-gray
+        .container 
+            .related-section__header
+                .related-section__title Latest Reports
+
+                .related-section__total 3 Total
+            .related-section__companies
+                +preview-company
+
+                +preview-company
+
+                +preview-company
+
+                +preview-company
+
+                +preview-company
+
+                +preview-company
+
+                +preview-company
+
+    section.related-section
+        .container 
+            .related-section__header
+                .related-section__title Companies
+
+                .related-section__total 4 Total
+
+            .related-section__wrapper 
+                .related-section__column
+                    +report-item("featured")
+                .related-section__column
+                    +report-item-avatar("related")
+                .related-section__column
+                    +report-item-avatar("related")
+
+    section.related-section.related-section_bg-gray
+        .container 
+            .related-section__header
+                .related-section__title Related Reports
+
+                .related-section__total 9 Total
+
+            .scam-categories__wrapper.scam-categories__wrapper--for-related
+                .scam-categories__column
+                    +scam-categories__item("bill-list", "Fake Check", "9 Reports")
+                
+                .scam-categories__column
+                    +scam-categories__item("card", "Credit Cards", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("point-on-map", "Travel or Vacations", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("bag", "Online Purchase", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("pie-chat", "Investment", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("user-id", "Employment", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("covid", "COVID-19", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("government", "Government Grant", "9 Reports")
+
+                .scam-categories__column
+                    +scam-categories__item("heart", "Romance", "9 Reports")
+
+    +slider-reports("Latest Reports", "radio", "")
+

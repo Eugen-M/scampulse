@@ -1,0 +1,84 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Spotify - Most Useful Reviews
+
+block styles
+    
+block content
+    .card 
+        .container 
+            .card__header
+                .card__badge VERIFIED COMPANY
+
+                .card__header-row
+                    .card__company 
+                        .card__company-logo 
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+
+                        .card__company-column 
+                            .card__company-title Spotifycodes.co.uk
+
+                            .card__company-total 23 Reports
+
+                .card__header-buttons
+                    a.btn.btn--primary.btn--report(href="")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#edit")
+                        span.btn__label File report
+        .card__nav
+        .container 
+            .card__header
+                .card__badge VERIFIED business
+
+                .card__header-row
+                    .card__company 
+                        .card__company-logo.card__company-logo--for-business 
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+
+                        .card__company-column 
+                            .card__company-title Spotifycodes.co.uk
+
+                    .card__header-column
+                        a.btn.btn--primary.btn--hide-label.btn--report(href="")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#edit")
+                            span.btn__label File report
+
+                        a.btn.btn--hide-label.btn--email(href="")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#mail")
+                            span.btn__label Email This Business
+        
+        .card__nav 
+            .container 
+                .card__nav-list 
+                    a.card__nav-link.card__nav-link--active(href="") Reports
+
+                    a.card__nav-link(href="") Overview
+        
+        .card__content 
+            .container
+                .card__wrapper.card__wrapper--hide-aside
+                    .card__aside
+                        +contacts
+                        +business-details
+                        +social-media
+                        +related-businesses
+                        +related-categories
+
+                    .card__column 
+                        .card__subheader 
+                            .card__subheader-column
+                                .card__subheader-title Reports
+                                .card__subheader-quantity 23 Total
+
+                            +sorter
+
+                        +report-useful
+                        +report-useful
+                        +report-useful
+                        +report-useful
+                        +report
+                        +pagination

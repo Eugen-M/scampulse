@@ -1,0 +1,115 @@
+/* Placeholders */
+.related-section {
+  padding: 60px 0 36px;
+}
+@media (max-width: 767px) {
+  .related-section {
+    padding: 40px 0 16px;
+  }
+}
+.related-section_bg-gray {
+  background: #F3F2EA;
+}
+.related-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 0 24px;
+}
+@media (max-width: 767px) {
+  .related-section__header {
+    margin-bottom: 20px;
+  }
+}
+.related-section__title {
+  font-size: 28px;
+  letter-spacing: -0.14px;
+  font-weight: 700;
+  margin: 0 12px 0 0;
+  line-height: 1.2;
+  color: #1A1A1A;
+}
+@media (max-width: 767px) {
+  .related-section__title {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.1px;
+  }
+}
+.related-section__total {
+  font-weight: 400;
+  letter-spacing: -0.18px;
+  line-height: 1.3;
+  font-size: 18px;
+  color: #1A1A1A;
+  padding-top: 5px;
+}
+@media (max-width: 767px) {
+  .related-section__total {
+    letter-spacing: -0.14px;
+    font-size: 14px;
+    padding-top: 4px;
+  }
+}
+.related-section__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 -12px;
+  padding-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .related-section__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .related-section__wrapper {
+    padding-bottom: 8px;
+  }
+}
+.related-section__column {
+  max-width: 33.3333%;
+  width: 33.3333%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 0 12px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+@media (max-width: 991px) {
+  .related-section__column {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .related-section__column {
+    padding-bottom: 16px;
+  }
+}
+.related-section__companies {
+  padding-bottom: 12px;
+}
+@media (max-width: 991px) {
+  .related-section__companies {
+    padding-bottom: 16px;
+  }
+}

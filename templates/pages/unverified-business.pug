@@ -1,0 +1,49 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Unverified Business
+
+block styles
+    
+block content
+    .card 
+        .container 
+            .card__header
+                .card__header-row
+                    .card__company 
+                        .card__company-logo 
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+
+                        .card__company-column 
+                            .card__company-title Spotifycodes.co.uk
+
+                            .card__company-total 23 Reports
+
+                .card__header-buttons
+                    a.btn.btn--primary.btn--report(href="")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#edit")
+                        span.btn__label File report
+
+        .card__content 
+            .container
+                .card__wrapper.card__wrapper--mob-reverse
+                    .card__aside
+                        +contacts
+                        +related-businesses
+                        +related-categories
+
+                    .card__column 
+                        .card__subheader 
+                            .card__subheader-column
+                                .card__subheader-title Reports
+                                .card__subheader-quantity 23 Total
+
+                            +sorter
+
+                        +report-with-images
+                        +report
+                        +report
+                        +report
+                        +pagination

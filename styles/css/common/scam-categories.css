@@ -1,0 +1,205 @@
+/* Placeholders */
+.scam-categories {
+  padding: 120px 0 105px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  background: #F3F2EA;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .scam-categories {
+    padding: 0 0 108px;
+  }
+}
+.scam-categories__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 40px;
+}
+@media (max-width: 767px) {
+  .scam-categories__header {
+    margin-bottom: 24px;
+  }
+}
+.scam-categories__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.18px;
+  color: #1A1A1A;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .scam-categories__title {
+    font-size: 26px;
+  }
+}
+.scam-categories__title-icon {
+  width: 28px;
+  height: 32px;
+  margin-right: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  stroke: #DF2020;
+  fill: #1A1A1A;
+}
+@media (max-width: 767px) {
+  .scam-categories__title-icon {
+    width: 22px;
+    height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .scam-categories__btn {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 40px;
+  }
+}
+.scam-categories__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -7px;
+}
+.scam-categories__column {
+  max-width: 33.33333333%;
+  width: 33.33333333%;
+  padding: 0 7px 16px;
+}
+@media (max-width: 991px) {
+  .scam-categories__column {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .scam-categories__column {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .scam-categories__wrapper--limited .scam-categories__column:nth-child(n+4) {
+    display: none;
+  }
+}
+.scam-categories__wrapper--for-related {
+  margin: 0 -12px;
+}
+@media (max-width: 767px) {
+  .scam-categories__wrapper--for-related {
+    padding-bottom: 8px;
+  }
+}
+.scam-categories__wrapper--for-related .scam-categories__column {
+  padding: 0 12px 24px;
+}
+@media (max-width: 767px) {
+  .scam-categories__wrapper--for-related .scam-categories__column {
+    padding-bottom: 16px;
+  }
+}
+.scam-categories__item {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 23px;
+}
+.scam-categories__item:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0 8px 16px 2px rgba(43, 42, 36, 0.2);
+          box-shadow: 0 8px 16px 2px rgba(43, 42, 36, 0.2);
+  border-color: #D1D0BD;
+}
+@media (max-width: 767px) {
+  .scam-categories__item {
+    padding: 20px;
+  }
+}
+.scam-categories__item-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  background: #E4E3D8;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.scam-categories__item-svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  fill: #1A1A1A;
+}
+.scam-categories__item-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.27px;
+  color: #1A1A1A;
+  margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+  .scam-categories__item-name {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+.scam-categories__item-quantity {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.24px;
+  display: block;
+  color: rgba(26, 26, 26, 0.56);
+}

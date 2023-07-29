@@ -1,0 +1,85 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | About
+
+block styles
+    
+block content
+    .main-slide.main-slide--safe
+        .container
+            .main-slide__inner
+                .main-slide__column
+                    .main-slide__title 
+                        span.main-slide__title-span Keep you safe <br />
+                        | in a digital world
+                    .main-slide__text Our goal is to empower consumers with the knowledge they need to stay safe and informed in an increasingly complex digital world
+
+                .main-slide__box
+                    img(src="../assets/img/main-slide-safe.svg" alt="" class="main-slide__img img-fluid")
+
+    .our-achievements
+        .container 
+            .our-achievements__title Our Achievements
+
+            .our-achievements__wrapper
+                .our-achievements__column
+                    .our-achievements__item
+                        .our-achievements__item-logo 
+                            svg.our-achievements__item-icon.our-achievements__item-icon--user
+                                use(href="../assets/img/sprite.svg#user-hands-up")
+
+                        .our-achievements__item-title 400.000
+
+                        .our-achievements__item-descr Site Visitors
+
+                .our-achievements__column
+                    .our-achievements__item
+                        .our-achievements__item-logo 
+                            svg.our-achievements__item-icon.our-achievements__item-icon--case
+                                use(href="../assets/img/sprite.svg#case")
+
+                        .our-achievements__item-title 8 Years
+
+                        .our-achievements__item-descr In Business
+
+                .our-achievements__column
+                    .our-achievements__item
+                        .our-achievements__item-logo 
+                            svg.our-achievements__item-icon.our-achievements__item-icon--pen
+                                use(href="../assets/img/sprite.svg#pen")
+
+                        .our-achievements__item-title 1.000.000
+
+                        .our-achievements__item-descr Reports in Year 
+
+                .our-achievements__column
+                    .our-achievements__item
+                        .our-achievements__item-logo.our-achievements__item-logo--security
+                            svg.our-achievements__item-icon.our-achievements__item-icon--security
+                                use(href="../assets/img/sprite.svg#security")
+
+                        .our-achievements__item-title 3.000
+
+                        .our-achievements__item-descr Verified Companies
+
+    .main-slide.main-slide--stay
+        .container
+            .main-slide__inner
+                .main-slide__box
+                    img(src="../assets/img/main-slide-stay.svg" alt="" class="main-slide__img img-fluid")
+
+                .main-slide__column
+                    .main-slide__title 
+                        span.main-slide__title-span Stay safe 
+                        | from scams and frauds with our free online platform
+                    .main-slide__text Our team of consumer protection experts provides up-to-date information on the latest scams and frauds
+
+                    a.btn.btn--primary(href="")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#edit")
+                        span.btn__label File report
+
+    +slider-reports("Latest Reports", "radio", "")
+

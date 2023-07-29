@@ -1,0 +1,58 @@
+@import '../common/colors', '../common/mixins';
+
+.related-businesses {
+    &__item {
+        border-top: 1px solid $c-ash-gray;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        &:first-child {
+            border: none;
+        }
+    }
+
+    &__logo {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        flex-shrink: 0;
+        overflow: hidden;
+        background: $c-ash-gray;
+        @include border-radius(50%);
+    }
+
+    &__name {
+        display: block;
+        letter-spacing: -0.24px;
+        font-weight: 400;
+        line-height: 1.3;
+        display: block;
+        font-size: 16px;
+        color: $c-shades-black-100;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            letter-spacing: -0.21px;
+        }
+    }
+
+    &__icon {
+        stroke: $c-shades-black-500;
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include border-radius(50%);
+    }
+}

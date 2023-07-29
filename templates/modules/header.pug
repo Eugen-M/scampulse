@@ -1,0 +1,60 @@
+include ../layout/mixins
+
+header.header
+    .container
+        .header__wrapper
+            a.header__logo(href="index.html")
+                img(src="../assets/img/logo.svg" alt="" class="header__logo-img img-fluid")
+
+            +search("search--for-header")
+
+            ul.header__navi
+                li.header__navi-item
+                    a.header__navi-link(href="#") 
+                        svg.header__navi-icon
+                            use(href="../assets/img/sprite.svg#categories")
+                        | Categories
+                li.header__navi-item
+                    a.header__navi-link(href="#") FAQ
+                li.header__navi-item
+                    a.header__navi-link(href="#") About
+                        
+            .header__buttons
+                button.header__btn--navi(type="button")
+                    svg.header__btn-icon
+                        use(href="../assets/img/sprite.svg#icon-navi")
+                button.btn.header__btn--log-in(type="button") Log In
+                a.btn.btn--primary.btn--hide-label.btn--report(href="")
+                    svg.btn__icon
+                        use(href="../assets/img/sprite.svg#edit")
+                    span.btn__label File report
+
+.mobile-menu
+    .mobile-menu__header 
+        a.mobile-menu__logo(href="index.html")
+            img(src="../assets/img/logo.svg" alt="" class="mobile-menu__logo-img img-fluid")
+
+        button.mobile-menu__close(type="button")
+            svg.mobile-menu__close-icon
+                use(href="../assets/img/sprite.svg#cancel")
+
+    +search("search--for-mobile-menu")
+
+    ul.mobile-menu__navi 
+        each val, key in {"Categories": "categories", "About": "info", "FAQ": "faq"}
+            li.mobile-menu__navi-item
+                a.mobile-menu__navi-link(href="")
+                    svg.mobile-menu__navi-icon
+                        use(href="../assets/img/sprite.svg#" + val)
+                    span.mobile-menu__navi-label= key
+
+    .mobile-menu__footer 
+        a.btn.mobile-menu__btn(href="")
+            svg.btn__icon
+                use(href="../assets/img/sprite.svg#user")
+            span.btn__label Log In
+
+        a.btn.btn--primary.mobile-menu__btn(href="")
+            svg.btn__icon
+                use(href="../assets/img/sprite.svg#edit")
+            span.btn__label File report 

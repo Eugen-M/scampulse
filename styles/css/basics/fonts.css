@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Light.otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'MegaFon Graphik';
+  src: url("../../../assets/fonts/MegaFon Graphik LC-Black.otf");
+  font-weight: 900;
+}

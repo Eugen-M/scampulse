@@ -1,0 +1,41 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | In Categories
+
+block styles
+    
+block content
+    .card 
+        .container 
+            .card__header
+                .card__categories 
+                    .card__categories-logo 
+                        svg.card__categories-icon
+                            use(href="../assets/img/sprite.svg#debt-collections")
+
+                    .card__categories-column 
+                        .card__categories-title Debt Colletions
+
+        .card__content 
+            .container
+                .card__wrapper.card__wrapper--mob-reverse
+                    .card__aside
+                        +related-categories
+
+                    .card__column 
+                        .card__subheader 
+                            .card__subheader-column
+                                .card__subheader-title Businesses
+                                .card__subheader-quantity 9 Total
+
+                            +sorter
+
+                        .card__companies
+                            +preview-company-for-card
+                            +preview-company-for-card
+                            +preview-company-for-card
+                            +preview-company-for-card 
+                            +preview-company-for-card-sign
+                            +preview-company-for-card-sign

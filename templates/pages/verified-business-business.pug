@@ -1,0 +1,124 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Verified Business - Business
+
+block styles
+    
+block content
+    .card 
+        .container 
+            .card__header
+                .card__badge VERIFIED COMPANY
+
+                .card__header-row
+                    .card__company 
+                        .card__company-logo 
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+
+                        .card__company-column 
+                            .card__company-title Spotifycodes.co.uk
+
+                            .card__company-total 23 Reports
+
+                .card__header-buttons
+                    a.btn.btn--primary.btn--report(href="")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#edit")
+                        span.btn__label File report
+        .card__nav
+        .container 
+            .card__header
+                .card__badge VERIFIED business
+
+                .card__header-row
+                    .card__company 
+                        .card__company-logo.card__company-logo--for-business
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+
+                        .card__company-column 
+                            .card__company-title Spotifycodes.co.uk
+
+                    .card__header-column
+                        a.btn.btn--primary.btn--hide-label.btn--report(href="")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#edit")
+                            span.btn__label File report
+
+                        a.btn.btn--hide-label.btn--email(href="")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#mail")
+                            span.btn__label Email This Business
+        
+        .card__nav 
+            .container 
+                .card__nav-list 
+                    a.card__nav-link(href="") Reports
+
+                    a.card__nav-link.card__nav-link--active(href="") Overview
+        
+        .card__content 
+            .container
+                .card__wrapper
+                    .card__aside
+                        +contacts
+                        +business-details
+                        +social-media
+                        +related-businesses
+                        +related-categories
+
+                    .card__column
+                        article.card__article
+                            .card__article-title Business Information & History
+
+                            hr.card__article-line
+
+                            .card__article-content 
+                                p.card__article-parag Spotify is a digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world. Basic functions such as playing music are totally free, but you can also choose to upgrade to Spotify Premium.
+
+                                p.card__article-parag Spotify was founded in 2006 in Stockholm, Sweden, by Daniel Ek, former CTO of Stardoll, and Martin Lorentzon, co-founder of Tradedoubler. According to Ek, the company's title was initially misheard from a name shouted by Lorentzon. Later they thought out a portmanteau of "spot" and "identify".
+                           
+                        .card__faq 
+                            +categories__item
+                            +categories__item
+                            +categories__item
+                            +categories__item
+                            +categories__item
+
+                        article.card__article
+                            .card__article-title Overview of Spotify reports handling
+
+                            hr.card__article-line
+
+                            .card__article-content 
+                                p.card__article-parag 1446 Spotify reports first appeared on Scampulse on Dec 12, 2006. The latest review Delivery of items was posted on Jun 16, 2022. The latest complaint Prime Spoof and Non-Delivery Problem was resolved on Jun 29, 2021. Amazon has an average consumer rating of 1 stars from 1446 reviews. Spotify has resolved 108 complaints.
+
+                        article.card__article
+                            .card__article-title Is Scampluse.com associated with Spotify?
+
+                            hr.card__article-line
+
+                            .card__article-content 
+                                p.card__article-parag Scampulse.com is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Spotify Customer Service. Initial Spotify complaints should be directed to their team directly. You can find contact details for Spotify above.
+
+                                p.card__article-parag Scampulse.com is an independent complaint resolution platform that has been successfully voicing consumer concerns since 2004. We are doing work that matters - connecting customers with businesses around the world and help them resolve issues and be heard.
+
+                                p.card__article-parag Use this comments board to leave complaints and reviews about Spotify. Discuss the issues you have had with Spotify and work with their customer service team to find a resolution.
+
+                        .card__latest
+                            .card__latest-header
+                                .card__latest-title Spotify Latest Reports
+
+                                svg.slider-reports__title-icon
+                                    use(href="../assets/img/sprite.svg#radio")
+
+                            .card__latest-content 
+                                .card__latest-column 
+                                    +report-item-latest
+
+                                .card__latest-column 
+                                    +report-item-latest
+
+                                .card__latest-column 
+                                    +report-item-latest

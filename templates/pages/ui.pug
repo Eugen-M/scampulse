@@ -1,0 +1,488 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | UI page
+
+block styles
+    
+block content
+    div(style="background: gray;")
+        .container
+            h1 Buttons
+
+            button.btn(type="button") btn
+            <br />
+            <br />
+            button.btn.btn--primary(type="button") btn primary
+            <br />
+            <br />
+            button.btn.btn--secondary(type="button") btn secondary
+            <br />
+            <br />
+            button.btn.btn--primary(type="button" disabled) btn primary disabled
+            <br />
+            <br />
+            button.btn.btn--secondary(type="button" disabled) btn secondary disabled
+            <br />
+            <br />
+            button.btn(type="button")
+                svg.btn__icon.btn__icon_color
+                    use(href="../assets/img/sprite.svg#facebook")
+                span.btn__label Log In with Facebook
+            <br />
+            <br />
+            button.btn(type="button")
+                svg.btn__icon.btn__icon_color
+                    use(href="../assets/img/sprite.svg#google")
+                span.btn__label Log In with Google 
+            <br />
+            <br />
+        .container
+            h2 Main page 
+
+            <br />
+            <br />
+
+            +scam-categories__item("categories", "Government Grant", "9 Reports") 
+
+            <br />
+            <br />
+
+            .ui-wrapper
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#categories")
+
+                svg.scam-categories__title-icon
+                    use(href="../assets/img/sprite.svg#edit")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#bill-list")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#card")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#point-on-map")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#bag")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#pie-chat")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#user-id")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#covid")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#government")
+
+                svg.scam-categories__item-svg
+                    use(href="../assets/img/sprite.svg#heart")
+
+                svg.header__user-arrow-icon
+                    use(href="../assets/img/sprite.svg#arrow-down")
+
+                svg.categories__header-icon
+                    use(href="../assets/img/sprite.svg#clock")
+
+                svg.categories__header-icon
+                    use(href="../assets/img/sprite.svg#chevron-down")
+
+                svg.mobile-menu__navi-icon
+                    use(href="../assets/img/sprite.svg#lock")
+
+                svg.mobile-menu__navi-icon
+                    use(href="../assets/img/sprite.svg#info")
+
+                svg.mobile-menu__navi-icon
+                    use(href="../assets/img/sprite.svg#faq")
+
+                svg.mobile-menu__navi-icon
+                    use(href="../assets/img/sprite.svg#user")
+
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#log-out")
+
+                svg.categories__section-svg
+                    use(href="../assets/img/sprite.svg#security")
+
+                svg.search__item-verified
+                    use(href="../assets/img/sprite.svg#verified")
+
+                svg.report__btn-icon
+                    use(href="../assets/img/sprite.svg#useful")
+
+                svg.report__btn-icon
+                    use(href="../assets/img/sprite.svg#reply")
+
+                svg.report__btn-icon
+                    use(href="../assets/img/sprite.svg#share")
+
+                svg.contacts-block__icon
+                    use(href="../assets/img/sprite.svg#phone")
+                
+                svg.contacts-block__icon
+                    use(href="../assets/img/sprite.svg#mail")
+                
+                svg.contacts-block__icon
+                    use(href="../assets/img/sprite.svg#site")
+
+                svg.contacts-block__icon
+                    use(href="../assets/img/sprite.svg#location")
+
+                svg.social-media__item-icon
+                    use(href="../assets/img/sprite.svg#icon-facebook")
+
+                svg.social-media__item-icon
+                    use(href="../assets/img/sprite.svg#icon-twitter")
+
+                svg.social-media__item-icon
+                    use(href="../assets/img/sprite.svg#icon-youtube")
+
+                svg.social-media__item-icon
+                    use(href="../assets/img/sprite.svg#icon-linkedin")
+
+                svg.user-navi__icon
+                    use(href="../assets/img/sprite.svg#messages")
+
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#send")
+
+                svg.our-achievements__item-icon.our-achievements__item-icon--user
+                    use(href="../assets/img/sprite.svg#user-hands-up")
+                
+                svg.our-achievements__item-icon.our-achievements__item-icon--case
+                    use(href="../assets/img/sprite.svg#case")
+
+                svg.our-achievements__item-icon.our-achievements__item-icon--pen
+                    use(href="../assets/img/sprite.svg#pen")
+
+                svg.our-achievements__item-icon.our-achievements__item-icon--security
+                    use(href="../assets/img/sprite.svg#security")
+
+            <br />
+            <br />
+            
+        .container
+            <br />
+
+            +search-row
+
+            <br />
+            <br />
+
+            +search
+
+            <br />
+            <br />
+
+            <br />
+            <br />
+
+            +report-item("featured")
+            <br />
+            <br />
+            +report-item-avatar("trend")
+            <br />
+            <br />
+            
+        +modal-message("verified", "Password sent to your email")
+        
+        .wrapper.wrapper_night
+            .container
+
+            .article-block
+                .container
+                    section.article-block__section
+                        h1 Title H1
+
+                        h2 Title H2
+
+                        h3 Title H3
+
+                        h4 Title H4
+
+                        p Like many businesses, we also collect information through cookies and similar technologies. You can find out more about this in our 
+                            a(href="") Cookies Policy
+                            | .
+
+                        p Information automatically collected
+
+                        ul
+                            li To facilitate account creation and login process.If you choose to link your account with us to a third party account (such as your Google or Facebook account), we use the information you allowed us to collect from those third parties to facilitate account creation and logon process. See the section below headed "how do we handle your social logins" for further information.
+                            li To send you marketing and promotional communications. We and/or our third party marketing partners may use the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt-out of our marketing emails at any time (see the "what are your privacy rights" below).
+                            li To send administrative information to you. We may use your personal information to send you product, service and new feature information and/or information about changes to our terms, conditions, and policies.
+                            li Deliver targeted advertising to you.
+        
+            
+
+        .container
+            <br />
+            <br />
+
+            h1 Forms
+            <br />
+            <br />
+
+            .form-block__item 
+                label.form-block__label(for="1") Your Email
+
+                input.form-block__input(type="text" id="1" value="test")
+
+            .form-block__item 
+                label.form-block__label(for="2") Your Email
+
+                input.form-block__input.form-block__input--is-invalid(type="text" id="2" value="test")
+
+                .form-block__msg Write Without *&^%
+
+            .form-block__item 
+                label.form-block__label(for="3") Your Email
+
+                input.form-block__input(type="text" id="3" disabled value="test") 
+
+            <br />
+            <br />
+
+        .container
+            h1 FAQ block
+            <br />
+            <br />
+
+            +categories__item
+
+            <br />
+            <br />
+
+            +pagination
+
+            <br />
+            <br />
+
+            h1 Reports
+
+            <br />
+            <br />
+
+            +report
+
+            <br />
+            <br />
+
+            +report-with-images
+
+            <br />
+            <br />
+
+            +report-with-business-answer
+
+            <br />
+            <br />
+
+            +report-useful
+
+            <br />
+            <br />
+
+            article.card__article
+                .card__article-title Is Scampluse.com associated with Spotify?
+
+                hr.card__article-line
+
+                .card__article-content 
+                    p.card__article-parag Scampulse.com is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Spotify Customer Service. Initial Spotify complaints should be directed to their team directly. You can find contact details for Spotify above.
+
+                    p.card__article-parag Scampulse.com is an independent complaint resolution platform that has been successfully voicing consumer concerns since 2004. We are doing work that matters - connecting customers with businesses around the world and help them resolve issues and be heard.
+
+                    p.card__article-parag Use this comments board to leave complaints and reviews about Spotify. Discuss the issues you have had with Spotify and work with their customer service team to find a resolution.
+
+            <br />
+            <br />
+
+            <br />
+            <br />
+
+            
+            form.search
+                .search__wrapper
+                    input.search__input(type="text" placeholder="Companies or Categories")
+
+                    button.search__cancel(type="cancel")
+                        svg.search__cancel-icon
+                            use(href="../assets/img/sprite.svg#cancel")
+                    button.search__btn(type="button")
+                        svg.btn__icon
+                            use(href="../assets/img/sprite.svg#loupe")
+
+                .search__dropdown.js-search__dropdown--opened
+                    .search__section 
+                        .search__title Popular Businesses
+
+                        a.search__item(href="")
+                            span.search__item-box 
+                                span.search__item-logo 
+                                    svg.search__item-icon
+                                        use(href="../assets/img/sprite.svg#briefcase")
+
+                                span.search-row__item-name-strong Spo
+                                | tifycodes.co.uk
+
+                            span.search__item-quantity 108 Reviews
+
+                        a.search__item(href="")
+                            span.search__item-box 
+                                span.search__item-logo 
+                                    img(src="../assets/content/spotify.jpg" alt="" class="search-row__item-img")
+
+                                span.search__item-name-strong Spo
+                                | tify
+
+                                svg.search__item-verified
+                                    use(href="../assets/img/sprite.svg#verified")
+
+                            span.search__item-quantity 108 Reviews
+
+                    .search-row__section 
+                        .search__title Categories
+
+                        a.search__item(href="")
+                            span.search__item-name 
+                                span.search__item-name-strong Spo
+                                | rt Goods
+
+                            span.search__item-quantity 8 Reviews
+
+                        a.search__item(href="")
+                            span.search__item-name 
+                                | Medical 
+                                span.search__item-name-strong Spo
+                                | rts
+
+                            span.search__item-quantity 12 Reviews
+                    
+                    .search__buttons 
+                        button.btn.btn--secondary.search__show-all(type="button")
+                            span.btn__label Show All Results
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#arrow-right")
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            form.search-row
+                .search-row__wrapper
+                    input.search-row__input(type="text")
+
+                    button.search-row__cancel(type="cancel")
+                        svg.search-row__cancel-icon
+                            use(href="../assets/img/sprite.svg#cancel")
+                button.btn.btn--secondary.btn--hide-label.search-row__btn(type="button")
+                    svg.btn__icon
+                        use(href="../assets/img/sprite.svg#loupe")
+                    span.btn__label Search
+
+                .search-row__dropdown.js-search-row__dropdown--opened
+                    .search-row__section 
+                        .search-row__title Popular Businesses
+
+                        a.search-row__item(href="")
+                            span.search-row__item-box 
+                                span.search-row__item-logo 
+                                    svg.search-row__item-icon
+                                        use(href="../assets/img/sprite.svg#briefcase")
+
+                                span.search-row__item-name-strong Spo
+                                | tifycodes.co.uk
+
+                            span.search-row__item-quantity 108 Reviews
+
+                        a.search-row__item(href="")
+                            span.search-row__item-box 
+                                span.search-row__item-logo 
+                                    img(src="../assets/content/spotify.jpg" alt="" class="search-row__item-img")
+
+                                span.search-row__item-name-strong Spo
+                                | tify
+
+                                svg.search-row__item-verified
+                                    use(href="../assets/img/sprite.svg#verified")
+
+                            span.search-row__item-quantity 108 Reviews
+
+                    .search-row__section 
+                        .search-row__title Categories
+
+                        a.search-row__item(href="")
+                            span.search-row__item-name 
+                                span.search-row__item-name-strong Spo
+                                | rt Goods
+
+                            span.search-row__item-quantity 8 Reviews
+
+                        a.search-row__item(href="")
+                            span.search-row__item-name 
+                                | Medical 
+                                span.search-row__item-name-strong Spo
+                                | rts
+
+                            span.search-row__item-quantity 12 Reviews
+                    
+                    .search-row__buttons 
+                        button.btn.btn--secondary.search-row__show-all(type="button")
+                            span.btn__label Show All Results
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#arrow-right")
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />

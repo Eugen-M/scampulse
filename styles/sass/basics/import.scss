@@ -1,0 +1,58 @@
+@import "../basics/default.scss";
+@import "../basics/buttons.scss";
+@import "../basics/header.scss";
+@import "../basics/footer.scss";
+@import "../basics/mobile-menu.scss";
+
+/* main page */
+@import "../common/search.scss";
+@import "../common/scam-categories.scss";
+@import "../common/slider-reports.scss";
+@import "../common/report-item.scss";
+@import "../common/main-slide.scss";
+@import "../common/search-row.scss";
+
+/* search results */
+@import "../common/search-results.scss";
+@import "../common/related-section.scss";
+@import "../common/preview-company.scss";
+
+/* all categories / FAQ */
+@import "../common/categories.scss";
+
+/* 404 */
+@import "../common/not-found-block.scss";
+
+/* privacy policy / cookie policy / terms of use */
+@import "../common/article-block.scss";
+
+/* modal message */
+@import "../common/modal-message.scss";
+
+/* password sent/log in/sign in/forgot password/edit profile */
+@import "../common/form-block.scss";
+
+/* in category/unverified business/ */
+@import "../common/card.scss";
+@import "../common/aside-box.scss";
+@import "../common/sorter.scss";
+@import "../common/report.scss";
+@import "../common/pagination.scss";
+
+/* blocks in aside-box */
+@import "../common/related-categories.scss";
+@import "../common/contacts-block.scss";
+@import "../common/related-businesses.scss";
+@import "../common/business-details.scss";
+@import "../common/social-media.scss";
+@import "../common/user-navi.scss";
+
+/* about */
+@import "../common/our-achievements.scss";
+
+/* modal */
+@import "../common/modal.scss";
+
+/* comments */
+@import "../common/comment.scss";
+@import "../common/upload.scss";

@@ -1,0 +1,40 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Contact Us
+
+block styles
+    
+block content 
+    .card 
+        .container 
+            .card__header
+                .card__badge VERIFIED user
+
+                .card__user 
+                    .card__user-logo 
+                        img(src="../assets/content/avatar.jpg" alt="" class="card__user-img")
+
+                    .card__user-column 
+                        .card__user-title Hello, Johny Depp
+
+        .form-block.form-block_bg-gray  
+            .container 
+                .form-block__wrapper
+                    form.form-block__box
+                        .form-block__top
+                            .form-block__title Contact Us
+
+                        +form-block-item("Full Name", "name", "text")
+                        +form-block-item("Email", "email", "text")
+                        +form-block-item("Subject", "subject", "text")
+                        +form-block-item("Your Message", "message", "text")
+
+                        .form-block__buttons.form-block__buttons--last
+                            button.btn.btn--primary(type="button" disabled)     
+                                span.btn__label Submit 
+
+                                svg.btn__icon
+                                    use(href="../assets/img/sprite.svg#send")
+        

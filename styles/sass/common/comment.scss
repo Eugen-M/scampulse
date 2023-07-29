@@ -1,0 +1,147 @@
+@import '../common/colors', '../common/mixins';
+
+.comment {
+    margin: 0 0 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $c-ash-gray;
+
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    &:last-child {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    &__header {
+        margin: 0 0 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__avatar {
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        background: $c-light-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include border-radius(50%);
+
+        &-icon {
+            stroke: $c-shades-black-500;
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    
+    &__name {
+        font-weight: 700;
+        letter-spacing: -0.24px;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $c-shades-black-100;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+    }
+
+    &__btn {
+        width: 24px;
+        height: 24px;
+        border: none;
+        cursor: pointer;
+        display: block;
+
+        &-icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+            stroke: $c-shades-black-100;
+            opacity: 0.72;
+        }
+    }
+
+    &__content {}
+
+    &__text {
+        margin-bottom: 12px;
+        letter-spacing: -0.24px;
+        font-weight: 400;
+        line-height: 1.5;
+        opacity: 0.72;
+        color: $c-shades-black-100;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 1.3;
+            letter-spacing: -0.21px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &-link {
+            font-weight: 500;
+            letter-spacing: -0.21px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: $c-shades-black-100;
+        }
+
+        &-sep {
+            margin: 0 12px;
+            width: 1px;
+            height: 16px;
+            line-height: 0;
+            font-size: 0;
+            background: $c-ash-gray;
+        }
+
+        &-date {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.21px;
+            line-height: 1.3;
+            color: rgba($c-shades-black-100, 0.72);
+        }
+    }
+
+    &__reply {
+        padding: 24px 0 0 48px;
+
+        @media (max-width: 767px) {
+            padding: 20px 0 0 48px;
+        }
+    }
+
+    &__reply & {
+        margin: 0;
+        padding-bottom: 0;
+    }
+}
+

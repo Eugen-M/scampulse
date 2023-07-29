@@ -1,0 +1,55 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | Log In - Error
+
+block styles
+    
+block content 
+    .form-block.form-block_bg-gray  
+        .container 
+            .form-block__wrapper
+                form.form-block__box
+                    .form-block__top
+                        .form-block__title Welcome Back!
+
+                    .form-block__item 
+                        label.form-block__label(for="2") Your Email
+
+                        input.form-block__input.form-block__input--is-invalid(type="text" id="2" value="test")
+
+                        .form-block__msg Write Without *&^%
+                    +form-block-item("Password", "pass", "password")
+
+                    .form-block__buttons
+                        button.btn.btn--primary(type="button") Log In
+
+                    .form-block__links 
+                        .form-block__links-column Alredy Have An Acoount?  
+                            a.form-block__links-item(href="") Create One
+
+                        .form-block__links-column  
+                            a.form-block__links-item(href="") Forgot Password
+
+                    .form-block__sep 
+                        .form-block__sep-text or
+
+                    .form-block__buttons
+                        button.btn(type="button")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#facebook")
+                            span.btn__label Log In with Facebook
+
+                        button.btn(type="button")
+                            svg.btn__icon
+                                use(href="../assets/img/sprite.svg#google")
+                            span.btn__label Log In with Google 
+
+                    .form-block__agree Click “Log In” to agree to 
+                        a(href="" target="_blank") Scampulse’s Terms of Service 
+                        | and acknowledge that 
+                        a(href="" target="_blank") Google’s Privacy Policy 
+                        | applies to you.
+
+    

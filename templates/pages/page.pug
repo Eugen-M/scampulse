@@ -1,0 +1,22 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Title
+
+block styles
+    link(href="styles/pages/page.css" rel="stylesheet")
+    link(href="../styles/css/common/message-box.css" rel="stylesheet")
+    
+block content
+    .container
+        .message-box.message-box_fixed
+            .message-box__icon
+                img.img-fluid(src="../assets/img/icon-green-circle.svg" alt="")
+            .message-box__column
+                .message-box__title Ваш прогноз сохранен
+                a.message-box__link(href="") Перейти к результатам
+
+            span.message-box__btn.message-box__btn_close
+    
+            

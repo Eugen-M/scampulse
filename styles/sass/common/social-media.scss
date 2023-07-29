@@ -1,0 +1,31 @@
+@import '../common/colors', '../common/mixins';
+
+.social-media {
+    &__item {
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-top: 1px solid $c-ash-gray;
+        cursor: pointer;
+
+        &:first-child {
+            border: none;
+        }
+
+        &-icon {
+            margin: 0 16px 0 0;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        &-label {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.24px;
+            line-height: 1.3;
+            color: $c-shades-black-100;
+        }
+    }
+}

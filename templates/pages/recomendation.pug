@@ -1,0 +1,32 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Recomendation
+
+block styles
+    
+block content
+    +slider-reports("Latest Reports", "radio", "slider-reports_bg-gray")
+
+    .overlay
+
+    .modal
+        .modal__title Recomendation
+
+        .modal__text Your text is shorter than 250 characters. To attract more attention to your review, we suggest to make it more detailed.
+
+        .modal__buttons 
+            a.btn(href="")
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#edit")
+                span.btn__label Edit Text
+
+            a.btn.btn--primary(href="")
+                span.btn__label Submit
+                svg.btn__icon
+                    use(href="../assets/img/sprite.svg#send")
+
+        button.modal__btn(type="button" data-bs-dismiss="modal" aria-label="Close")
+            svg.modal__btn-icon
+                use(href="../assets/img/sprite.svg#close")

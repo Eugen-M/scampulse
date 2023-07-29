@@ -1,0 +1,46 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | File A Report
+
+block styles
+    
+block content 
+    .card 
+        .container 
+            .card__header
+                .card__badge VERIFIED user
+
+                .card__user 
+                    .card__user-logo 
+                        img(src="../assets/content/avatar.jpg" alt="" class="card__user-img")
+
+                    .card__user-column 
+                        .card__user-title Hello, Johny Depp
+
+        .form-block.form-block_bg-gray  
+            .container 
+                .form-block__wrapper
+                    form.form-block__box
+                        .form-block__top
+                            .form-block__title File a Report
+
+                        +form-block-item("Business Name", "name", "text")
+                        +form-block-item("Scammer’s Email", "email", "text")
+                        +form-block-select("Country", "country")
+                        +form-block-item("Scammer’s Adress", "adress", "text")
+                        +form-block-item("Scammer’s Phone", "phone", "text")
+                        +form-block-item("Scammer’s Website", "website", "text")
+                        +form-block-select("Intial Means of Contact", "scam")
+                        +form-block-select("Type of Scam", "scam")
+                        +form-block-item("Review Headline", "review", "text")
+                        +form-block-item("Share Your Experience", "experience", "text")
+
+                        .form-block__buttons.form-block__buttons--last
+                            button.btn.btn--primary(type="button" disabled)     
+                                span.btn__label Submit 
+
+                                svg.btn__icon
+                                    use(href="../assets/img/sprite.svg#send")
+        

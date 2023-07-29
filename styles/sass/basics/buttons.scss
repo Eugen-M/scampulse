@@ -1,0 +1,188 @@
+@import '../common/colors', '../common/mixins';
+
+.btn {
+    $rootName: &;
+
+    text-decoration: none;
+    background: none;
+    border: 1px solid $c-dark-gray;
+    text-align: center;
+    color: $c-shades-black-100;
+    padding: 5px 25px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.1;
+    @include border-radius(8px);
+    transition: $anim;
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background: $c-peppermint;
+        border-color: $c-peppermint;
+        color: $c-white;
+    }
+
+    &:active {
+       background: $c-rainee;
+       border-color: $c-rainee;
+       color: $c-white;
+    }
+
+    &:focus {
+        background: $c-mantle;
+        border-color: $c-mantle;
+        color: $c-white;
+    }
+    
+    &--primary {
+        background: $c-red;
+        border: 1px solid $c-red;
+        color: $c-white;
+        
+        &:hover {
+            text-decoration: none;
+            background: $c-shades-red-400;
+            border-color: $c-shades-red-400;
+        }
+    
+        &:active {
+           background: $c-shades-red-300;
+           border-color: $c-shades-red-300;
+        }
+    
+        &:focus {
+            background: $c-shades-red-200;
+            border-color: $c-shades-red-200;
+        }
+    
+        
+    }
+
+    &--secondary {
+        background: $c-shades-black-100;
+        border-color: $c-shades-black-100;
+        color: $c-white;
+
+        &:hover {
+            border-color: $c-shades-black-300;
+            background: $c-shades-black-300;
+        }
+
+        &:active {
+            border-color: $c-shades-black-500;
+            background: $c-shades-black-500;
+        }
+
+        &:focus {
+            background: $c-shades-black-700;
+            border-color: $c-shades-black-700;
+        }
+    }
+
+    &:disabled {
+        background: $c-gainsboro;
+        border-color: $c-gainsboro;
+        cursor: default;
+        color: $c-shades-black-100;
+        opacity: 0.32;
+
+        &:active,
+        &:hover {
+            background: $c-gainsboro;
+            border-color: $c-gainsboro;
+            color: $c-shades-black-100;
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        stroke: $c-shades-black-100;
+        fill: $c-shades-black-100;
+        flex-shrink: 0;
+
+        &_color {
+            fill: none;
+            stroke: none;
+        }
+
+        @media (max-width: 767px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &:disabled &__icon,
+    &:disabled:hover &__icon {
+        stroke: $c-shades-black-100;
+        fill: $c-shades-black-100;
+    }
+
+    & > &__icon:first-child {
+        margin: 0 12px 0 0;
+
+        @media (max-width: 767px) {
+            margin-right: 8px;
+        }
+    }
+
+    &__label + &__icon {
+        margin: 0 0 0 12px;
+
+        @media (max-width: 767px) {
+            margin: 0 0 0 8px;
+        }
+    }
+
+    &--hide-label &__icon,
+    &--hide-label &__icon:first-child,
+    &--hide-label &__icon:last-child {
+        @media (max-width: 991px) {
+            margin: 0 auto;
+        }
+    }
+
+    &--hide-label &__label {
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    &--primary &__icon,
+    &--secondary &__icon,
+    &:hover &__icon {
+        stroke: $c-white;
+
+        &_color {
+            stroke: none;
+        }
+    }
+
+    &--email,
+    &--report,
+    &--edit,
+    &--update {
+        padding-left: 20px;
+
+        &#{$rootName}--hide-label {
+            @media (max-width: 991px) {
+                padding-left: 11px;
+                padding-right: 11px;
+            }
+        }
+    }
+
+    &--update &__icon {
+        opacity: 0.52;
+    }
+}

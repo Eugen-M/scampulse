@@ -1,0 +1,66 @@
+include ../layout/mixins
+
+footer.footer
+    .container
+        .footer__top
+            .footer__title Type of Scam
+            nav.footer__wrapper
+                .footer__column.footer__column_w25
+                    ul.footer__navi
+                        each val in ["Advance fee loan", "Bank/Credit card company imposter", "Bank/Credit card company iImposter scam", "Business email compromise", "Charity", "Counterfeit product", "COVID-19", "Credit Cards", "Credit Repair/Debt Relief", "Crypto Currency"]
+                            li.footer__navi-item
+                                a.footer__navi-link(href="")= val
+
+                .footer__column.footer__column_w25
+                    ul.footer__navi
+                        each val1 in ["Debt Collections", "Employment", "Fake Check/Money Order", "Fake Invoice/Supplier Bill", "Family/Friend Emergency", "Foreign Money Exchange", "Government Agency Imposter", "Government Grant", "Healthcare/Medicaid/Medicare", "Home Improvement"]
+                            li.footer__navi-item
+                                a.footer__navi-link(href="")= val1
+
+                .footer__column.footer__column_w25
+                    ul.footer__navi
+                        each val2 in ["Identity Theft", "Investment", "Moving", "Nigerian/Foreign Money Exchange", "Online Purchase", "Other", "Phishing", "Publishing", "Rental", "Romance"]
+                            li.footer__navi-item
+                                a.footer__navi-link(href="")= val2
+
+                .footer__column.footer__column_w25
+                    ul.footer__navi
+                        each val3 in ["Scholarship", "Tax Collection", "Travel/Vacation/Timeshare", "Travel/Vacations", "Utility", "Vanity Award", "Vanity Award Scam", "Worthless Problem-solving Service", "Worthless Problem-solving Service Scam", "Yellow Pages/Directories"]
+                            li.footer__navi-item
+                                a.footer__navi-link(href="")= val3
+    hr.footer__line
+    .container
+        .footer__bottom
+            .footer__wrapper
+                .footer__column.footer__column_w50
+                    .footer__inner
+                        a.footer__logo(href="index.html")
+                            img(src="../assets/img/logo-dark.svg" alt="" class="footer__logo-img img-fluid")
+
+                        .footer__text
+                            p ScamPulse.​com is an online platform to report frauds, scam & dishonest individuals that aims to expose unethical and outright illegal practices of companies and individuals and prevent them from increasing their amount of victims. Created by a team of seasoned professionals, ScamPulse.​com hopes to solidify itself as one of the leading websites in this area.
+                
+                .footer__column.footer__column_w50
+                    .footer__wrapper.footer__wrapper_inner
+                        .footer__column.footer__column_w50
+                            ul.footer__subnavi
+                                li.footer__subnavi-item
+                                    .footer__subnavi-title Company
+                                each val4 in ["Home", "Report Categories", "Personal Data", "Terms of Use", "Privacy Policy", "Cookie Policy"]
+                                    li.footer__subnavi-item
+                                        a.footer__subnavi-link(href="")= val4
+
+                        .footer__column.footer__column_w50
+                            ul.footer__subnavi
+                                li.footer__subnavi-item
+                                    .footer__subnavi-title Support
+                                each val5 in ["FAQ", "About", "Contact Us"]
+                                    li.footer__subnavi-item
+                                        a.footer__subnavi-link(href="")= val5
+            .footer__box
+                .footer__terms This site is protected by reCAPTCHA and the 
+                    a.footer__terms-link(href="") Google Privacy Policy
+                    |  and 
+                    a.footer__terms-link(href="") Terms of Service apply
+                    | .
+                .footer__copyright &copy; 2023 Scampulse. All rights reserved.

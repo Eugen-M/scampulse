@@ -1,0 +1,89 @@
+/* Placeholders */
+.lost-money {
+  background: #F3F2EA;
+}
+.lost-money__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 120px 0;
+}
+@media (max-width: 767px) {
+  .lost-money__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 40px 0;
+  }
+}
+@media (max-width: 767px) {
+  .lost-money__img {
+    margin: 0 auto 20px;
+  }
+}
+.lost-money__box {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 991px) {
+  .lost-money__box {
+    width: 35%;
+  }
+}
+@media (max-width: 767px) {
+  .lost-money__box {
+    width: 100%;
+  }
+}
+.lost-money__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.24px;
+  color: #1A1A1A;
+  margin: 0 0 23px;
+}
+@media (max-width: 767px) {
+  .lost-money__title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.18px;
+    margin-bottom: 13px;
+  }
+}
+.lost-money__title-span {
+  color: #DF2020;
+  display: block;
+}
+.lost-money__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  margin: 0 0 23px;
+  color: #1A1A1A;
+}
+@media (max-width: 767px) {
+  .lost-money__text {
+    font-size: 18px;
+    letter-spacing: -0.27px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .lost-money__btn {
+    width: 100%;
+  }
+}

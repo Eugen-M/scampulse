@@ -1,0 +1,22 @@
+extends ../layout/main-inner
+include ../layout/mixins
+
+block title
+    | 404
+
+block styles
+    
+block content            
+    .not-found-block
+        .container
+            .not-found-block__inner
+                .not-found-block__column
+                    .not-found-block__title Oops! We can't <br /> find that page.
+
+                    .not-found-block__text We apologize for the inconvenience. It's possible that the page has been moved, deleted, or renamed. You can try checking the URL for any typos, or use the search bar to find what you're looking for.
+
+                    a.btn.btn--primary(href="") Return Home
+
+                .not-found-block__box
+                    img(src="../assets/img/not-found.svg" alt="" class="not-found-block__img img-fluid")
+    
