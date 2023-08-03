@@ -13,9 +13,10 @@ block content
                 .card__badge VERIFIED COMPANY
 
                 .card__header-row
-                    .card__company 
+                    .card__company(itemscope itemtype="https://schema.org/Organization")
+                        <meta itemprop="url" content="/">
                         .card__company-logo 
-                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img" itemprop="logo")
 
                         .card__company-column 
                             .card__company-title Spotifycodes.co.uk
@@ -33,9 +34,10 @@ block content
                 .card__badge VERIFIED business
 
                 .card__header-row
-                    .card__company 
+                    .card__company(itemscope itemtype="https://schema.org/Organization")
+                        <meta itemprop="url" content="/"> 
                         .card__company-logo.card__company-logo--for-business 
-                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img" itemprop="logo")
 
                         .card__company-column 
                             .card__company-title Spotifycodes.co.uk
@@ -60,7 +62,7 @@ block content
         
         .card__content 
             .container
-                .card__wrapper.card__wrapper--hide-aside
+                .card__wrapper
                     .card__aside
                         +contacts
                         +business-details

@@ -54,8 +54,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .card__header-column {
   display: -webkit-box;
@@ -124,11 +124,6 @@
     width: 100%;
     margin-right: 0;
     padding-bottom: 30px;
-  }
-}
-@media (max-width: 991px) {
-  .card__wrapper--hide-aside .card__aside {
-    display: none;
   }
 }
 @media (max-width: 991px) {

@@ -91,7 +91,7 @@
   z-index: 11;
   display: none;
 }
-.search-row__dropdown.js-search-row__dropdown--opened {
+.search-row__wrapper:focus-within ~ .search-row__dropdown {
   display: block;
 }
 .search-row__section {

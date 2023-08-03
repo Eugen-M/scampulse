@@ -74,10 +74,10 @@
         background: $c-white;
         z-index: 11;
         display: none;
+    }
 
-        &.js-search-row__dropdown--opened {
-            display: block;
-        }
+    &__wrapper:focus-within ~ &__dropdown {
+        display: block;
     }
 
     &__section {

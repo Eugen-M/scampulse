@@ -35,7 +35,7 @@ block content
                         +form-block-select("Intial Means of Contact", "scam")
                         +form-block-select("Type of Scam", "scam")
                         +form-block-item("Review Headline", "review", "text")
-                        +form-block-item("Share Your Experience", "experience", "text")
+                        +form-block-textarea("Share Your Experience", "experience")
 
                         .upload 
                             .upload__files 
@@ -45,8 +45,17 @@ block content
                                             img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
 
                                             .upload__item-loader
-                                                .upload__item-loader-circle
-                                                    .upload__item-loader-circle-inner
+                                                .upload__item-circle
+                                                    svg.upload__item-spinner(viewBox="0 0 50 50")
+                                                        circle(
+                                                            class="upload__item-spinner-path"
+                                                            cx="24"
+                                                            cy="24"
+                                                            r="20"
+                                                            fill="none"
+                                                            stroke="#ffffff"
+                                                            stroke-width="2.5"
+                                                        )
 
                                         .upload__item-box
                                             .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg

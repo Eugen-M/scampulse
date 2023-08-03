@@ -155,128 +155,49 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
 
-            &-circle {
-                display: block;
-                height: 24px;
-                width: 24px;
-                -webkit-animation: loader-2-1 3s linear infinite;
-                animation: loader-2-1 3s linear infinite;
-            
-                &-inner {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 0;
-                    margin: auto;
-                    height: 24px;
-                    width: 24px;
-                    -webkit-animation: loader-2-2 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
-                    animation: loader-2-2 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
-                
-                    &::before {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        margin: auto;
-                        height: 24px;
-                        width: 24px;
-                        border: 2px solid transparent;
-                        border-top: 2px solid #FFF;
-                        border-radius: 50%;
-                        -webkit-animation: loader-2-3 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
-                        animation: loader-2-3 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
-                    }
-            
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        margin: auto;
-                        height: 24px;
-                        width: 24px;
-                        border: 2px solid rgba(255, 255, 255, .5);
-                        border-radius: 50%;
-                    }
-                }
-            
-                @-webkit-keyframes loader-2-1 {
-                    0% {
-                        -webkit-transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        -webkit-transform: rotate(360deg);
-                    }
-                }
-                
-                @keyframes loader-2-1 {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-                
-                @-webkit-keyframes loader-2-2 {
-                    0% {
-                        -webkit-transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        -webkit-transform: rotate(360deg);
-                    }
-                }
-                
-                @keyframes loader-2-2 {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-                
-                @-webkit-keyframes loader-2-3 {
-                    0% {
-                        -webkit-transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        -webkit-transform: rotate(360deg);
-                    }
-                }
-                
-                @keyframes loader-2-3 {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-                
+        &-circle {
+            width: 24px;
+            height: 24px;
+            transform: rotate(90deg);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 1px;
+                @include border-radius(50%);
+                top: 1px;
+                width: 21px;
+                height: 21px;
+                border: 1px solid rgba($c-white, 0.52);
+            }
+        }
+
+        &-spinner {
+            width: 24px;
+            height: 24px;
+
+            &-path {
+                stroke: $c-white;
+                stroke-linecap: round;
+                animation: dash 3s linear infinite;
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 150;
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dasharray: 130, 150;
+                stroke-dashoffset: 0;
             }
         }
     }
-
 }
 
-
-
-
-
+  

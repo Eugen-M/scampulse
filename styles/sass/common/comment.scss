@@ -67,20 +67,66 @@
         }
     }
 
-    &__btn {
-        width: 24px;
-        height: 24px;
-        border: none;
-        cursor: pointer;
-        display: block;
-        background: none;
+    &__box {
+        position: relative;
 
-        &-icon {
+        &-btn {
+            width: 24px;
+            height: 24px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            background: none;
+        }
+
+        &-dots {
             display: block;
             width: 24px;
             height: 24px;
             stroke: $c-shades-black-100;
             opacity: 0.72;
+        }
+
+        &-dropdown {
+            position: absolute;
+            padding: 15px 16px;
+            border: 1px solid $c-dark-gray;
+            background: $c-white;
+            box-shadow: 0 4px 12px 0 rgba(23, 32, 75, 0.08);
+            right: 0;
+            top: 24px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            @include border-radius(8px);
+            z-index: 10;
+
+            &.js-comment__box-dropdown--opened {
+                display: flex;
+            }
+        }
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            margin-left: 16px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            display: block;
+
+            &--stroke {
+                stroke: $c-black;
+            }
         }
     }
 

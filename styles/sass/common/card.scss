@@ -45,7 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap; 
         }
 
         &-column {
@@ -100,12 +100,6 @@
             margin-right: 0;
             padding-bottom: 30px;
         }
-    }
-
-    &__wrapper--hide-aside &__aside {
-        @media (max-width: 991px) {
-            display: none;
-        } 
     }
 
     &__wrapper--mob-reverse &__aside {

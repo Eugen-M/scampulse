@@ -13,11 +13,10 @@ html(lang="ru-RU")
         script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
         != "<![endif]-->"
     body
-        .main
-            main.wrap-flex
-                include ../modules/header
-                .content
-                    block content
+        main.main
+            include ../modules/header
+            .content
+                block content
             include ../modules/footer
  
         script(src="../assets/js/code.jquery.com_jquery-3.7.0.min.js")

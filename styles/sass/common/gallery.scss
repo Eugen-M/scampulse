@@ -1,0 +1,85 @@
+@import '../common/colors', '../common/mixins';
+
+.gallery {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 146px 180px;
+    background: $c-shades-black-100;
+    z-index: 100;
+
+    @media (max-width: 767px) {
+       padding: 50px 70px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__counter {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 18px;
+        color: rgba($c-white, 0.52);
+        letter-spacing: -0.27px;
+        line-height: 1.3;
+        font-weight: 400;
+        top: 50px;
+
+        &-current {
+            color: $c-white;
+        }
+
+        @media (max-width: 767px) {
+            top: 20px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        width: 44px;
+        height: 44px;
+        margin-top: -22px;
+        @include border-radius(50%);
+        background: $c-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+
+        &-icon {
+            stroke: $c-black;
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        &--prev {
+            left: 40px;
+
+            @media (max-width: 767px) {
+                left: 10px;
+            }
+        }
+
+        &--next {
+            right: 40px;
+
+            @media (max-width: 767px) {
+                right: 10px;
+            }
+        }
+    }
+}
+

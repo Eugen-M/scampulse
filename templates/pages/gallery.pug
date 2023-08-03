@@ -1,0 +1,26 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Gallery
+
+block styles
+    
+block content            
+    +slider-reports("Latest Reports", "radio", "slider-reports_bg-gray")
+
+    .gallery
+        .gallery__counter 
+            span.gallery__counter-current 1
+            | /4
+        .gallery__inner
+            img(src="../assets/content/image.jpg" alt="" class="gallery__img")
+
+        
+        button.gallery__btn.gallery__btn--prev(type="button")
+            svg.gallery__btn-icon
+                use(href="../assets/img/sprite.svg#chevron-left")
+
+        button.gallery__btn.gallery__btn--next(type="button")
+            svg.gallery__btn-icon
+                use(href="../assets/img/sprite.svg#chevron-right")

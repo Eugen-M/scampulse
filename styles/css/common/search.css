@@ -123,7 +123,7 @@
   z-index: 11;
   display: none;
 }
-.search__dropdown.js-search__dropdown--opened {
+.search__wrapper:focus-within + .search__dropdown {
   display: block;
 }
 .search__section {

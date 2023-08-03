@@ -11,9 +11,10 @@ block content
         .container 
             .card__header
                 .card__header-row
-                    .card__company 
+                    .card__company(itemscope itemtype="https://schema.org/Organization") 
+                        <meta itemprop="url" content="/">
                         .card__company-logo 
-                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img")
+                            img(src="../assets/content/spotify.jpg" alt="" class="card__user-img" itemprop="logo")
 
                         .card__company-column 
                             .card__company-title Spotifycodes.co.uk

@@ -93,6 +93,26 @@ if(userBtnArrow) {
     userBtnArrow.addEventListener('click', clickUserBtn);
 }
 
+// report's dropdown
+const reportBtn = document.getElementsByClassName("report__business-btn");
+let n;
+
+for (n = 0; n < reportBtn.length; n++) {
+    reportBtn[n].addEventListener("click", function () {
+        this.nextElementSibling.classList.toggle("js-report__business-dropdown");
+    });
+}
+
+// comment's dropdown
+const commentBtn = document.getElementsByClassName("comment__box-btn");
+let t;
+
+for (t = 0; t < commentBtn.length; t++) {
+    commentBtn[t].addEventListener("click", function () {
+        this.nextElementSibling.classList.toggle("js-comment__box-dropdown--opened");
+    });
+}
+
 
 
 

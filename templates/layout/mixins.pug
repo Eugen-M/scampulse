@@ -263,12 +263,56 @@ mixin form-block-item(label, id, inputType)
 mixin form-block-select(label, id) 
     .form-block__item 
         label.form-block__label(for= id)= label
+        
+        .form-block__select
+            input.form-block__input(id= id value="Select")
 
-        select.form-block__select(id= id)
-            option(value="1") option 1
-            option(value="2") option 2
-            option(value="3") option 3
-            option(value="4") option 4
+            svg.form-block__arrow
+                use(href="../assets/img/sprite.svg#chevron-down")
+
+            button.form-block__cancel(type="cancel")
+                svg.form-block__cancel-icon
+                    use(href="../assets/img/sprite.svg#cancel")
+
+            .form-block__dropdown
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork
+
+                a.form-block__dropdown-link(href="") 
+                    strong.form-block__dropdown-strong New Y
+                    | ork         
+
+//- form-block - textarea
+mixin form-block-textarea(label, id) 
+    .form-block__item 
+        label.form-block__label(for= id)= label
+
+        textarea.form-block__textarea(id= id)
 
 //- modal-message
 mixin modal-message(icon, text)
@@ -331,6 +375,13 @@ mixin sorter
 
             svg.sorter__btn-icon
                 use(href="../assets/img/sprite.svg#sorter")
+
+        .sorter__dropdown
+            span.sorter__dropdown-item Unresolved
+
+            span.sorter__dropdown-item Newest
+
+            span.sorter__dropdown-item Oldest
 
 //- aside-box -->
 
@@ -538,17 +589,19 @@ mixin user-navi
 
 //- report -->
 mixin report 
-    .report 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse
         .report__content 
             .report__header 
                 .report__header-avatar A
                 .report__header-column 
-                    .report__header-title 
-                        a.report__header-name(href="") Aliona Walter
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        .report__header-name(itemprop="name") Aliona Walter
 
                         svg.report__header-verified
                             use(href="../assets/img/sprite.svg#verified")
-                    time.report__header-date 27 April 2022
+                    time.report__header-date(itemprop="datePublished") 27 April 2022
 
             .report__table 
                 .report__table-row 
@@ -578,9 +631,12 @@ mixin report
                         .report__table-badge Debt Collections
 
             .report__title
-                a.report__title-link(href="") No "ad-free 30 minutes" for watching "short video"
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
 
-            .report__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                .report__title-link( itemprop="about") No "ad-free 30 minutes" for watching "short video"
+
+            .report__text(itemprop="reviewBody") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
         .report__footer
             button.report__btn.report__btn--useful(type="button")
@@ -600,17 +656,19 @@ mixin report
 
 //- report-with-images
 mixin report-with-images
-    .report 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse 
         .report__content 
-            .report__header 
+            .report__header  
                 .report__header-avatar A
                 .report__header-column 
-                    .report__header-title 
-                        a.report__header-name(href="") Aliona Walter
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        a.report__header-name(href="" itemprop="name") Aliona Walter
 
                         svg.report__header-verified
                             use(href="../assets/img/sprite.svg#verified")
-                    time.report__header-date 27 April 2022
+                    time.report__header-date(itemprop="datePublished") 27 April 2022
 
             .report__table 
                 .report__table-row 
@@ -640,19 +698,21 @@ mixin report-with-images
                         .report__table-badge Debt Collections
 
             .report__title
-                a.report__title-link(href="") No "ad-free 30 minutes" for watching "short video"
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
+                a.report__title-link(href="" itemprop="about") No "ad-free 30 minutes" for watching "short video"
 
-            .report__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+            .report__text(itemprop="reviewBody") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
             .report__images 
                 a.report__images-item(href="")
-                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img")
+                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img" itemprop="image")
 
                 a.report__images-item(href="")
-                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img")
+                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img" itemprop="image")
 
                 a.report__images-item(href="")
-                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img")
+                    img(src="../assets/content/vermeer.jpg" alt="" class="report__images-img" itemprop="image")
 
         .report__footer
             button.report__btn.report__btn--useful(type="button")
@@ -672,17 +732,19 @@ mixin report-with-images
 
 //- report-with-business-answer
 mixin report-with-business-answer 
-    .report 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse  
         .report__content 
             .report__header 
                 .report__header-avatar A
                 .report__header-column 
-                    .report__header-title 
-                        a.report__header-name(href="") Aliona Walter
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        a.report__header-name(href="" itemprop="name") Aliona Walter
 
                         svg.report__header-verified
                             use(href="../assets/img/sprite.svg#verified")
-                    time.report__header-date 27 April 2022
+                    time.report__header-date(itemprop="datePublished") 27 April 2022
 
             .report__table 
                 .report__table-row 
@@ -712,9 +774,11 @@ mixin report-with-business-answer
                         .report__table-badge Debt Collections
 
             .report__title
-                a.report__title-link(href="") No "ad-free 30 minutes" for watching "short video"
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
+                a.report__title-link(href="" itemprop="about") No "ad-free 30 minutes" for watching "short video"
 
-            .report__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+            .report__text(itemprop="reviewBody") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
         .report__footer
             button.report__btn.report__btn--useful(type="button")
@@ -754,13 +818,32 @@ mixin report-with-business-answer
 
                 time.report__business-date 6 Hours
 
-            .report__business-box 
-                svg.report__business-dots 
-                    use(href="../assets/img/sprite.svg#dots")
+            .report__business-box
+                button.report__business-btn(type="button")
+                    svg.report__business-dots 
+                        use(href="../assets/img/sprite.svg#dots")
+
+                .report__business-dropdown
+                    a.report__business-link(href="")
+                        img.report__business-link-icon(alt="" src="../assets/img/whatsapp.png")
+                    a.report__business-link(href="")
+                        svg.report__business-link-icon 
+                            use(href="../assets/img/sprite.svg#icon-facebook")
+                    a.report__business-link(href="")
+                        svg.report__business-link-icon 
+                            use(href="../assets/img/sprite.svg#icon-twitter")
+                    a.report__business-link(href="")
+                        svg.report__business-link-icon.report__business-link-icon--stroke
+                            use(href="../assets/img/sprite.svg#mail")
+                    a.report__business-link(href="")
+                        svg.report__business-link-icon.report__business-link-icon--stroke 
+                            use(href="../assets/img/sprite.svg#link")
 
 //- report-useful
 mixin report-useful 
-    .report 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse  
         .report__useful 
             svg.report__useful-icon
                 use(href="../assets/img/sprite.svg#useful")
@@ -770,12 +853,12 @@ mixin report-useful
             .report__header 
                 .report__header-avatar A
                 .report__header-column 
-                    .report__header-title 
-                        a.report__header-name(href="") Aliona Walter
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        a.report__header-name(href="" itemprop="name") Aliona Walter
 
                         svg.report__header-verified
                             use(href="../assets/img/sprite.svg#verified")
-                    time.report__header-date 27 April 2022
+                    time.report__header-date(itemprop="datePublished") 27 April 2022
 
             .report__table 
                 .report__table-row 
@@ -805,9 +888,11 @@ mixin report-useful
                         .report__table-badge Debt Collections
 
             .report__title
-                a.report__title-link(href="") No "ad-free 30 minutes" for watching "short video"
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
+                a.report__title-link(href="" itemprop="about") No "ad-free 30 minutes" for watching "short video"
 
-            .report__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+            .report__text(itemprop="reviewBody") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
         .report__footer
             button.report__btn.report__btn--useful(type="button")
@@ -827,17 +912,19 @@ mixin report-useful
 
 //- report-with-comments
 mixin report-with-comments
-    .report 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse  
         .report__content 
             .report__header 
                 .report__header-avatar A
                 .report__header-column 
-                    .report__header-title 
-                        a.report__header-name(href="") Aliona Walter
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        a.report__header-name(href="" itemprop="name") Aliona Walter
 
                         svg.report__header-verified
                             use(href="../assets/img/sprite.svg#verified")
-                    time.report__header-date 27 April 2022
+                    time.report__header-date(itemprop="datePublished") 27 April 2022
 
             .report__table 
                 .report__table-row 
@@ -867,9 +954,11 @@ mixin report-with-comments
                         .report__table-badge Debt Collections
 
             .report__title
-                a.report__title-link(href="") No "ad-free 30 minutes" for watching "short video"
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
+                a.report__title-link(href="" itemprop="about") No "ad-free 30 minutes" for watching "short video"
 
-            .report__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+            .report__text(itemprop="reviewBody") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
         .report__footer
             button.report__btn.report__btn--useful(type="button")
@@ -902,8 +991,17 @@ mixin report-with-comments
                                 img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
 
                                 .upload__item-loader
-                                    .upload__item-loader-circle
-                                        .upload__item-loader-circle-inner
+                                    .upload__item-circle
+                                        svg.upload__item-spinner(viewBox="0 0 50 50")
+                                            circle(
+                                                class="upload__item-spinner-path"
+                                                cx="24"
+                                                cy="24"
+                                                r="20"
+                                                fill="none"
+                                                stroke="#ffffff"
+                                                stroke-width="2.5"
+                                            )
 
                             .upload__item-box
                                 .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
@@ -952,40 +1050,58 @@ mixin report-with-comments
 
                         button.btn.btn--primary.report__form-btn-send(type="button") Send
             
-            .comment
+            .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                 .comment__header 
-                    .comment__user 
+                    .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person") 
                         .comment__avatar
                             svg.comment__avatar-icon
                                 use(href="../assets/img/sprite.svg#user")
-                        .comment__name Alex Alex Alex
+                        .comment__name(itemprop="name") Alex Alex Alex
 
-                    button.comment__btn(type="button")
-                        svg.comment__btn-icon
-                            use(href="../assets/img/sprite.svg#dots")
+                    mixin comment-box
+                        .comment__box
+                            button.comment__box-btn(type="button")
+                                svg.comment__box-dots 
+                                    use(href="../assets/img/sprite.svg#dots")
+
+                            .comment__box-dropdown
+                                a.comment__box-link(href="")
+                                    img.comment__box-icon(alt="" src="../assets/img/whatsapp.png")
+                                a.comment__box-link(href="")
+                                    svg.comment__box-icon 
+                                        use(href="../assets/img/sprite.svg#icon-facebook")
+                                a.comment__box-link(href="")
+                                    svg.comment__box-icon 
+                                        use(href="../assets/img/sprite.svg#icon-twitter")
+                                a.comment__box-link(href="")
+                                    svg.comment__box-icon.comment__box-icon--stroke
+                                        use(href="../assets/img/sprite.svg#mail")
+                                a.comment__box-link(href="")
+                                    svg.comment__box-icon.comment__box-icon--stroke 
+                                        use(href="../assets/img/sprite.svg#link")
+                    +comment-box
+
                 .comment__content 
-                    .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                    .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                 .comment__row
                     a.comment__row-link(href="") Reply
 
                     span.comment__row-sep 
 
-                    time.comment__row-date 11 Hours
+                    time.comment__row-date(itemprop="dateCreated") 11 Hours
 
                 .comment__reply
-                    .comment
+                    .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                         .comment__header 
-                            .comment__user 
+                            .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person") 
                                 .comment__avatar
                                     img.comment__avatar-img(alt="" src="../assets/content/avatar.jpg")
-                                .comment__name Alex Alex Alex
+                                .comment__name(itemprop="name") Alex Alex Alex
 
-                            button.comment__btn(type="button")
-                                svg.comment__btn-icon
-                                    use(href="../assets/img/sprite.svg#dots")
+                            +comment-box
                         .comment__content 
-                            .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                            .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                         .comment__row
                             a.comment__row-link(href="") Reply
@@ -996,19 +1112,17 @@ mixin report-with-comments
 
                         .comment-reply
 
-            .comment
+            .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                 .comment__header 
-                    .comment__user 
+                    .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person") 
                         .comment__avatar
                             svg.comment__avatar-icon
                                 use(href="../assets/img/sprite.svg#user")
-                        .comment__name Alex Alex Alex
+                        .comment__name(itemprop="name") Alex Alex Alex
 
-                    button.comment__btn(type="button")
-                        svg.comment__btn-icon
-                            use(href="../assets/img/sprite.svg#dots")
+                    +comment-box
                 .comment__content 
-                    .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                    .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                 .comment__row
                     a.comment__row-link(href="") Reply
@@ -1018,19 +1132,17 @@ mixin report-with-comments
                     time.comment__row-date 11 Hours
 
                 .comment__reply 
-                    .comment
+                    .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                         .comment__header 
-                            .comment__user 
+                            .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person") 
                                 .comment__avatar
                                     svg.comment__avatar-icon
                                         use(href="../assets/img/sprite.svg#user")
-                                .comment__name Alex Alex Alex
+                                .comment__name(itemprop="name") Alex Alex Alex
 
-                            button.comment__btn(type="button")
-                                svg.comment__btn-icon
-                                    use(href="../assets/img/sprite.svg#dots")
+                            +comment-box
                         .comment__content 
-                            .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                            .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                         .comment__row
                             a.comment__row-link(href="") Reply
@@ -1040,18 +1152,16 @@ mixin report-with-comments
                             time.comment__row-date 11 Hours
 
                         .comment__reply
-                            .comment
+                            .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                                 .comment__header 
-                                    .comment__user 
+                                    .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person") 
                                         .comment__avatar
                                             img.comment__avatar-img(alt="" src="../assets/content/avatar.jpg")
-                                        .comment__name Alex Alex Alex
+                                        .comment__name(itemprop="name") Alex Alex Alex
 
-                                    button.comment__btn(type="button")
-                                        svg.comment__btn-icon
-                                            use(href="../assets/img/sprite.svg#dots")
+                                    +comment-box
                                 .comment__content 
-                                    .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                                    .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                                 .comment__row
                                     a.comment__row-link(href="") Reply
@@ -1060,19 +1170,17 @@ mixin report-with-comments
 
                                     time.comment__row-date 11 Hours
 
-            .comment
+            .comment(itemscope itemprop="comment" itemtype="https://schema.org/Comment")
                 .comment__header 
-                    .comment__user 
+                    .comment__user(itemprop="author" itemscope itemtype="https://schema.org/Person")  
                         .comment__avatar
                             svg.comment__avatar-icon
                                 use(href="../assets/img/sprite.svg#user")
-                        .comment__name Alex Alex Alex
+                        .comment__name(itemprop="name") Alex Alex Alex
 
-                    button.comment__btn(type="button")
-                        svg.comment__btn-icon
-                            use(href="../assets/img/sprite.svg#dots")
+                    +comment-box
                 .comment__content 
-                    .comment__text I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
+                    .comment__text(itemprop="text") I was sign up as member and requested for termination. I receive email as confirmation but my account monthly charges continued. Found its from Stockholm. There was a way to contact them. Only way is to kill it by changing my Credit Card, scary!
 
                 .comment__row
                     a.comment__row-link(href="") Reply

@@ -7,7 +7,7 @@ block title
 block styles
     
 block content
-    div(style="background: gray;")
+    div(style="background: yellow;")
         .container
             h1 Buttons
 
@@ -50,6 +50,14 @@ block content
                 span.btn__label With icon, but in mobile hide label
             <br />
             <br />
+
+            +sorter
+            <br />
+            <br />
+
+            <br />
+            <br />
+
         .container
             h2 Main page 
 
@@ -250,8 +258,17 @@ block content
                                     img(src="../assets/content/vermeer.jpg" alt="" class="upload__item-img")
 
                                     .upload__item-loader
-                                        .upload__item-loader-circle
-                                            .upload__item-loader-circle-inner
+                                        .upload__item-circle
+                                            svg.upload__item-spinner(viewBox="0 0 50 50")
+                                                circle(
+                                                    class="upload__item-spinner-path"
+                                                    cx="24"
+                                                    cy="24"
+                                                    r="20"
+                                                    fill="none"
+                                                    stroke="#ffffff"
+                                                    stroke-width="2.5"
+                                                )
 
                                 .upload__item-box
                                     .upload__item-name windows-JW-T2BH5k5E-unsplash.jpg
@@ -323,8 +340,21 @@ block content
 
                 input.form-block__input(type="text" id="3" disabled value="test") 
 
-            <br />
-            <br />
+            +form-block-textarea("Textarea", "tx")
+
+            .form-block__item 
+                label.form-block__label(for="4") Textarea Disabled
+
+                textarea.form-block__textarea(type="text" id="4" disabled) 
+
+            .form-block__item 
+                label.form-block__label(for="5") Textarea with is invalid
+
+                textarea.form-block__textarea.form-block__textarea--is-invalid(type="text" id="5") test
+
+                .form-block__msg Write Without *&^%
+
+            +form-block-select("Select", "sel")
 
         .container
             h1 FAQ block
@@ -405,7 +435,7 @@ block content
                         svg.btn__icon
                             use(href="../assets/img/sprite.svg#loupe")
 
-                .search__dropdown.js-search__dropdown--opened
+                .search__dropdown
                     .search__section 
                         .search__title Popular Businesses
 
@@ -496,7 +526,7 @@ block content
                         use(href="../assets/img/sprite.svg#loupe")
                     span.btn__label Search
 
-                .search-row__dropdown.js-search-row__dropdown--opened
+                .search-row__dropdown
                     .search-row__section 
                         .search-row__title Popular Businesses
 
