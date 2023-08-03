@@ -1,0 +1,34 @@
+extends ../layout/main
+include ../layout/mixins
+
+block title
+    | Ghost
+
+block styles
+    
+block content
+    .card 
+        .container 
+            .card__header
+                .card__user 
+                    .card__user-logo
+                        svg.card__user-icon
+                            use(href="../assets/img/sprite.svg#user")
+
+                    .card__user-column 
+                        .card__user-title Ghost933
+
+        .card__content 
+            .container
+                .card__wrapper
+                    .card__aside
+                        +about-user-default
+
+                    .card__column 
+                        .card__subheader 
+                            .card__subheader-column
+                                .card__subheader-title Post Summary
+
+                        +report-ghost
+                        +report-ghost
+                        +report-ghost

@@ -278,6 +278,18 @@
             object-fit: cover;
         }
 
+        &-icon {
+            width: 36px;
+            height: 36px;
+            display: block;
+            stroke: $c-shades-black-500;
+
+            @media (max-width: 767px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
         &-title {
             font-size: 36px;
             letter-spacing: -0.18px;

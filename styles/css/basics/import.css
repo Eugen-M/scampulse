@@ -4082,6 +4082,18 @@ svg {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.card__user-icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+  stroke: #808080;
+}
+@media (max-width: 767px) {
+  .card__user-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 .card__user-title {
   font-size: 36px;
   letter-spacing: -0.18px;
@@ -4683,13 +4695,15 @@ svg {
   font-size: 16px;
   font-weight: 700;
   color: #1A1A1A;
-  cursor: pointer;
 }
 @media (max-width: 767px) {
   .report__header-name {
     font-size: 14px;
     line-height: 1.3;
   }
+}
+a.report__header-name {
+  cursor: pointer;
 }
 .report__header-date {
   font-size: 14px;
@@ -4814,13 +4828,15 @@ svg {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.3;
-  cursor: pointer;
 }
 @media (max-width: 767px) {
   .report__title-link {
     font-size: 16px;
     letter-spacing: -0.08px;
   }
+}
+a.report__title-link {
+  cursor: pointer;
 }
 .report__text {
   margin: 0;
@@ -5387,6 +5403,78 @@ svg {
   display: block;
   stroke: #1A1A1A;
   opacity: 0.52;
+}
+.report__skeleton {
+  -webkit-animation: skeleton-loading 1s linear infinite alternate;
+          animation: skeleton-loading 1s linear infinite alternate;
+  border: 1px solid #F3F2EA;
+}
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-color: #e3e3e3;
+  }
+  100% {
+    background-color: #fcfcfc;
+  }
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e3e3e3;
+  }
+  100% {
+    background-color: #fcfcfc;
+  }
+}
+.report__skeleton-name {
+  width: 118px;
+  height: 16px;
+  border-radius: 8px;
+}
+.report__skeleton-date {
+  width: 80px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+}
+.report__skeleton-logo {
+  margin-right: 8px;
+}
+.report__skeleton-title {
+  margin-bottom: 0;
+  width: 100%;
+  height: 24px;
+  border-radius: 8px;
+}
+.report__skeleton-text {
+  border-radius: 8px;
+  width: 100%;
+  height: 8px;
+  margin: 16px 0 0;
+}
+.report__skeleton-header {
+  margin: 0 0 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.report__skeleton-line {
+  width: 100%;
+  height: 1px;
+  margin: 0 0 16px;
+}
+.report__skeleton-header .report__header-column {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* Placeholders */

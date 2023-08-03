@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <title>List page
+    <title>Ghost
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -66,7 +66,31 @@
                   <use href="../assets/img/sprite.svg#icon-navi"></use>
                 </svg>
               </button>
-              <button class="btn header__btn--log-in" type="button">Log In</button><a class="btn btn--primary btn--hide-label btn--report" href="">
+              <div class="header__user"> 
+                <div class="header__user-avatar"><img class="header__user-img" src="../assets/content/avatar.jpg" alt=""></div>
+                <button class="header__user-arrow" type="button">
+                  <svg class="header__user-arrow-icon">
+                    <use href="../assets/img/sprite.svg#arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="header__user-dropdown"> <a class="header__user-link" href="">
+                    <svg class="header__user-link-icon">
+                      <use href="../assets/img/sprite.svg#user"></use>
+                    </svg><span class="header__user-link-label">My Settings</span></a><a class="header__user-link" href="">
+                    <svg class="header__user-link-icon">
+                      <use href="../assets/img/sprite.svg#edit"></use>
+                    </svg><span class="header__user-link-label">My Reports</span></a><a class="header__user-link" href="">
+                    <svg class="header__user-link-icon">
+                      <use href="../assets/img/sprite.svg#lock"></use>
+                    </svg><span class="header__user-link-label">Change Password</span></a><a class="header__user-link" href="">
+                    <svg class="header__user-link-icon">
+                      <use href="../assets/img/sprite.svg#info"></use>
+                    </svg><span class="header__user-link-label">Help</span></a><a class="header__user-link" href="">
+                    <svg class="header__user-link-icon">
+                      <use href="../assets/img/sprite.svg#log-out"></use>
+                    </svg><span class="header__user-link-label">Log Out</span></a>
+                </div>
+              </div><a class="btn btn--primary btn--hide-label btn--report" href="">
                 <svg class="btn__icon">
                   <use href="../assets/img/sprite.svg#edit"></use>
                 </svg><span class="btn__label">File report</span></a>
@@ -126,6 +150,18 @@
               </svg><span class="mobile-menu__navi-label">Categories</span></a></li>
           <li class="mobile-menu__navi-item"><a class="mobile-menu__navi-link" href="">
               <svg class="mobile-menu__navi-icon">
+                <use href="../assets/img/sprite.svg#edit"></use>
+              </svg><span class="mobile-menu__navi-label">My Reports</span></a></li>
+          <li class="mobile-menu__navi-item"><a class="mobile-menu__navi-link" href="">
+              <svg class="mobile-menu__navi-icon">
+                <use href="../assets/img/sprite.svg#user"></use>
+              </svg><span class="mobile-menu__navi-label">My Settings</span></a></li>
+          <li class="mobile-menu__navi-item"><a class="mobile-menu__navi-link" href="">
+              <svg class="mobile-menu__navi-icon">
+                <use href="../assets/img/sprite.svg#lock"></use>
+              </svg><span class="mobile-menu__navi-label">Change Password</span></a></li>
+          <li class="mobile-menu__navi-item"><a class="mobile-menu__navi-link" href="">
+              <svg class="mobile-menu__navi-icon">
                 <use href="../assets/img/sprite.svg#info"></use>
               </svg><span class="mobile-menu__navi-label">About</span></a></li>
           <li class="mobile-menu__navi-item"><a class="mobile-menu__navi-link" href="">
@@ -133,55 +169,146 @@
                 <use href="../assets/img/sprite.svg#faq"></use>
               </svg><span class="mobile-menu__navi-label">FAQ</span></a></li>
         </ul>
-        <div class="mobile-menu__footer"> <a class="btn mobile-menu__btn" href="">
-            <svg class="btn__icon">
-              <use href="../assets/img/sprite.svg#user"></use>
-            </svg><span class="btn__label">Log In</span></a><a class="btn btn--primary mobile-menu__btn" href="">
+        <div class="mobile-menu__footer"> 
+          <div class="mobile-menu__row">
+            <div class="mobile-menu__user"> 
+              <div class="mobile-menu__user-avatar"><img class="mobile-menu__user-img" src="../assets/content/avatar.jpg" alt=""></div>
+              <div class="mobile-menu__user-name">Johny Depp Johny Depp Johny Depp Johny Depp Johny Depp Johny Depp</div>
+            </div><a class="btn mobile-menu__log-out" href="">
+              <svg class="btn__icon">
+                <use href="../assets/img/sprite.svg#log-out"></use>
+              </svg><span class="btn__label">Log In</span></a>
+          </div><a class="btn btn--primary mobile-menu__btn" href="">
             <svg class="btn__icon">
               <use href="../assets/img/sprite.svg#edit"></use>
-            </svg><span class="btn__label">File report </span></a></div>
+            </svg><span class="btn__label">File report </span></a>
+        </div>
       </div>
       <div class="content">
-        <div class="container"><br><br><br>
-          <ul style="font-size: 20px;">
-            <li><a href="main.html">Main </a></li>
-            <li><a href="search-results.html">Search results </a></li>
-            <li><a href="all-categories.html">All categories</a></li>
-            <li><a href="in-categories.html">In Categories</a></li>
-            <li><a href="unverified-business.html">Unverified Business</a></li>
-            <li><a href="verified-business-reports.html">Verified Business - Reports</a></li>
-            <li><a href="verified-business-business.html">Verified Business - Business</a></li>
-            <li><a href="official-answer.html">Spotify - Official Answer</a></li>
-            <li><a href="most-useful-reviews.html">Spotify - Most Useful Reviews</a></li>
-            <li><a href="profile-personal.html">Profile - Personal</a></li>
-            <li><a href="profile-user.html">Profile - User</a></li>
-            <li><a href="comments.html">Comments</a></li>
-            <li><a href="ghost.html">Ghost</a></li>
-            <li><a href="edit-profile.html">Edit Profile</a></li>
-            <li><a href="edit-profile-filled.html">Edit Profile - Filled</a></li>
-            <li><a href="edit-profile-done.html">Edit Profile - Done</a></li>
-            <li><a href="change-password.html">Change Password</a></li>
-            <li><a href="change-password-filled.html">Change Password - Filled</a></li>
-            <li><a href="file-a-report.html">File A Report</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <li><a href="contact-us-filled.html">Contact Us - Filled</a></li>
-            <li><a href="recomendation.html">Recomendation</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-            <li><a href="terms-of-use.html">Terms Of Use</a></li>
-            <li><a href="modal-done.html">Modal Done</a></li>
-            <li><a href="modal-error.html">Modal Error</a></li>
-            <li><a href="log-in.html">Log In</a></li>
-            <li><a href="log-in-error.html">Log In - Error</a></li>
-            <li><a href="sign-up.html">Sign Up</a></li>
-            <li><a href="forgot-password.html">Forgot password</a></li>
-            <li><a href="password-sent.html">Password sent</a></li>
-            <li><a href="404.html">404</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="about.html">About </a></li>
-            <li><a href="ui.html">UI </a></li>
-          </ul><br><br><br>
+        <div class="card"> 
+          <div class="container"> 
+            <div class="card__header">
+              <div class="card__user"> 
+                <div class="card__user-logo">
+                  <svg class="card__user-icon">
+                    <use href="../assets/img/sprite.svg#user"></use>
+                  </svg>
+                </div>
+                <div class="card__user-column"> 
+                  <div class="card__user-title">Ghost933</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__content"> 
+            <div class="container">
+              <div class="card__wrapper">
+                <div class="card__aside">
+                        <div class="aside-box">
+                          <div class="aside-box__title">About</div>
+                          <div class="business-details">
+                            <div class="business-details__item"> 
+                              <div class="business-details__item-title">Phone</div>
+                              <div class="business-details__item-content">---</div>
+                            </div>
+                            <div class="business-details__item"> 
+                              <div class="business-details__item-title">Email</div>
+                              <div class="business-details__item-content">---</div>
+                            </div>
+                            <div class="business-details__item"> 
+                              <div class="business-details__item-title">Country</div>
+                              <div class="business-details__item-content">---</div>
+                            </div>
+                            <div class="business-details__item"> 
+                              <div class="business-details__item-title">City</div>
+                              <div class="business-details__item-content">---</div>
+                            </div>
+                            <div class="business-details__item"> 
+                              <div class="business-details__item-title">About</div>
+                              <div class="business-details__item-content">---</div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+                <div class="card__column"> 
+                  <div class="card__subheader"> 
+                    <div class="card__subheader-column">
+                      <div class="card__subheader-title">Post Summary</div>
+                    </div>
+                  </div>
+                        <div class="report" itemscope itemtype="https://schema.org/Review">
+                          <div itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;"><span itemprop="name">Scampulse</span></div>
+                          <div class="report__content"> 
+                            <div class="report__header report__skeleton-header">
+                              <div class="report__header-avatar report__skeleton report__skeleton-logo"></div>
+                              <div class="report__header-column"> 
+                                <div class="report__header-title" itemprop="author" itemscope itemtype="https://schema.org/Person"> 
+                                  <div class="report__header-name report__skeleton report__skeleton-name" itemprop="name"></div>
+                                  <svg class="report__header-verified">
+                                    <use href="../assets/img/sprite.svg#verified"></use>
+                                  </svg>
+                                </div>
+                                <time class="report__header-date report__skeleton report__skeleton-date" itemprop="datePublished"></time>
+                              </div>
+                            </div>
+                            <div class="report__skeleton report__skeleton-line"> </div>
+                            <div class="report__title"><span itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;"><span itemprop="name">Name Company </span></span>
+                              <div class="report__title-link report__skeleton report__skeleton-title" itemprop="about"> </div>
+                            </div>
+                            <div class="report__text report__skeleton report__skeleton-text" itemprop="reviewBody"> </div>
+                            <div class="report__skeleton report__skeleton-text"></div>
+                          </div>
+                        </div>
+                        <div class="report" itemscope itemtype="https://schema.org/Review">
+                          <div itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;"><span itemprop="name">Scampulse</span></div>
+                          <div class="report__content"> 
+                            <div class="report__header report__skeleton-header">
+                              <div class="report__header-avatar report__skeleton report__skeleton-logo"></div>
+                              <div class="report__header-column"> 
+                                <div class="report__header-title" itemprop="author" itemscope itemtype="https://schema.org/Person"> 
+                                  <div class="report__header-name report__skeleton report__skeleton-name" itemprop="name"></div>
+                                  <svg class="report__header-verified">
+                                    <use href="../assets/img/sprite.svg#verified"></use>
+                                  </svg>
+                                </div>
+                                <time class="report__header-date report__skeleton report__skeleton-date" itemprop="datePublished"></time>
+                              </div>
+                            </div>
+                            <div class="report__skeleton report__skeleton-line"> </div>
+                            <div class="report__title"><span itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;"><span itemprop="name">Name Company </span></span>
+                              <div class="report__title-link report__skeleton report__skeleton-title" itemprop="about"> </div>
+                            </div>
+                            <div class="report__text report__skeleton report__skeleton-text" itemprop="reviewBody"> </div>
+                            <div class="report__skeleton report__skeleton-text"></div>
+                          </div>
+                        </div>
+                        <div class="report" itemscope itemtype="https://schema.org/Review">
+                          <div itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;"><span itemprop="name">Scampulse</span></div>
+                          <div class="report__content"> 
+                            <div class="report__header report__skeleton-header">
+                              <div class="report__header-avatar report__skeleton report__skeleton-logo"></div>
+                              <div class="report__header-column"> 
+                                <div class="report__header-title" itemprop="author" itemscope itemtype="https://schema.org/Person"> 
+                                  <div class="report__header-name report__skeleton report__skeleton-name" itemprop="name"></div>
+                                  <svg class="report__header-verified">
+                                    <use href="../assets/img/sprite.svg#verified"></use>
+                                  </svg>
+                                </div>
+                                <time class="report__header-date report__skeleton report__skeleton-date" itemprop="datePublished"></time>
+                              </div>
+                            </div>
+                            <div class="report__skeleton report__skeleton-line"> </div>
+                            <div class="report__title"><span itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;"><span itemprop="name">Name Company </span></span>
+                              <div class="report__title-link report__skeleton report__skeleton-title" itemprop="about"> </div>
+                            </div>
+                            <div class="report__text report__skeleton report__skeleton-text" itemprop="reviewBody"> </div>
+                            <div class="report__skeleton report__skeleton-text"></div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer">

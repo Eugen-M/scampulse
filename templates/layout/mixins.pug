@@ -523,7 +523,7 @@ mixin social-media
                     use(href="../assets/img/sprite.svg#icon-linkedin")
                 span.social-media__item-label LinkedIn
 
-//- social-media
+//- about-user
 mixin about-user 
     .aside-box
         .aside-box__title About
@@ -553,6 +553,38 @@ mixin about-user
                 .business-details__item-title About
 
                 .business-details__item-content Hello, my little reader! I'm John Christopher Depp II.  Who I'm? American actor, producer, and musician. Also, the recipient of multiple accolades, including a Golden Globe Award and a Screen Actors Guild Award, in addition to nominations for three Academy Awards and two British Academy Film Awards.
+
+//- about-user-default
+mixin about-user-default 
+    .aside-box
+        .aside-box__title About
+
+        .business-details
+            .business-details__item 
+                .business-details__item-title Phone
+
+                .business-details__item-content ---
+
+            .business-details__item 
+                .business-details__item-title Email
+
+                .business-details__item-content ---
+
+            .business-details__item 
+                .business-details__item-title Country
+
+                .business-details__item-content ---
+
+            .business-details__item 
+                .business-details__item-title City
+
+                .business-details__item-content ---
+
+            .business-details__item 
+                .business-details__item-title About
+
+                .business-details__item-content ---
+
 
 //- user-navi
 mixin user-navi 
@@ -1188,6 +1220,34 @@ mixin report-with-comments
                     span.comment__row-sep 
 
                     time.comment__row-date 11 Hours
+
+//- report-ghost
+mixin report-ghost 
+    .report(itemscope itemtype="https://schema.org/Review")
+        div(itemscope itemprop="publisher" itemtype="https://schema.org/Organization" style="display: none;")
+            span(itemprop="name") Scampulse
+        .report__content 
+            .report__header.report__skeleton-header
+                .report__header-avatar.report__skeleton.report__skeleton-logo
+                .report__header-column 
+                    .report__header-title(itemprop="author" itemscope itemtype="https://schema.org/Person") 
+                        .report__header-name.report__skeleton.report__skeleton-name(itemprop="name")
+
+                        svg.report__header-verified
+                            use(href="../assets/img/sprite.svg#verified")
+                    time.report__header-date.report__skeleton.report__skeleton-date(itemprop="datePublished")
+
+            .report__skeleton.report__skeleton-line 
+
+            .report__title
+                span(itemscope itemtype="https://schema.org/Organization" itemprop="itemReviewed" style="display: none;")
+                    span(itemprop="name") Name Company 
+
+                .report__title-link.report__skeleton.report__skeleton-title(itemprop="about") 
+
+            .report__text.report__skeleton.report__skeleton-text(itemprop="reviewBody") 
+
+            .report__skeleton.report__skeleton-text
 
 //- end reports <--
 

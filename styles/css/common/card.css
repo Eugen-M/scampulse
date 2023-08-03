@@ -345,6 +345,18 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.card__user-icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+  stroke: #808080;
+}
+@media (max-width: 767px) {
+  .card__user-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 .card__user-title {
   font-size: 36px;
   letter-spacing: -0.18px;
